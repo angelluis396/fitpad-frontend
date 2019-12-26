@@ -6,7 +6,7 @@ export class FitPadButtons extends Component {
   logWorkout = (e) => {
     e.preventDefault();
     fitpadservices.logWorkout(e.target.name)
-    .then( result => console.log(result))
+    .then( result => console.log(result))git 
   }
   render() {
     return (
