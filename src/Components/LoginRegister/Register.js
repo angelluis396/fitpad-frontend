@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './Register.css'
-// import UserServices from '../Services/User-Services'
 
 
 export class Register extends Component {

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import FitPadServices from '../services/fitpadservices';
-import fitpadservices from '../services/fitpadservices';
+// import FitPadServices from '../services/fitpadservices';
+import fitpadservices from '../Services/fitpadservices';
 
 export class FitPadButtons extends Component {
   logWorkout = (e) => {
     e.preventDefault();
     fitpadservices.logWorkout(e.target.name)
-    .then( result => console.log(result))git 
+    .then( result => console.log(result))
   }
   render() {
     return (

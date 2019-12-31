@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './Login.css'
-// import UserServices from '../Services/User-Services'
+import userservices from '../../Services/userservice';
+
+
 
 
 //create form
@@ -13,7 +15,7 @@ export class Login extends Component {
   render() {
     return (
       <div>
-        <form className="loginForm">
+        <form className= "loginForm">
 
           <div className="FormField">
             <label className="formLabel" htmlFor="email"> Email: </label>
@@ -26,7 +28,7 @@ export class Login extends Component {
           </div>
 
           <div className="FormField">
-            <button className="signIn">  Login </button>
+            <button className="login" onClick={this.handleLogin}>  Login </button>
           </div>
          
         </form>

@@ -1,0 +1,15 @@
+h1{
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+p{
+  text-align: center;
+  font-family:'Montserrat', sans-serif;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
