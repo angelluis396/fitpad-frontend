@@ -5,6 +5,7 @@ import Login from './Components/LoginRegister/Login';
 import HandleLogin from './Services/userservice'
 import HomePage from "./Components/HomePage";
 import "./App.css";
+import AddWorkout from "./Components/AddWorkout/AddWorkout";
 
 // const User = ({match}) => {
 //   return (<h1> Welcome {match.params.username} </h1>)
@@ -33,6 +34,10 @@ export class App extends Component {
 
           <Route path="/Login">
             <Login />
+          </Route>
+          
+          <Route path="/AddWorkout">
+            <AddWorkout />
           </Route>
 
           {/* <Route path="/user/:username"component={User} /> */}

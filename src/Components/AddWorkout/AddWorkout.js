@@ -4,6 +4,7 @@ export class AddWorkout extends Component {
   render() {
     return (
       <div className="addWorkoutForm">
+        <button className="button"> Add A Workout </button>
         <form className="addExercise">
           <div className="exercise">
             <label className=" exercise"> Exercise </label>
@@ -19,4 +20,4 @@ export class AddWorkout extends Component {
   }
 }
 
-export default AddWorkout
+export default AddWorkout;
