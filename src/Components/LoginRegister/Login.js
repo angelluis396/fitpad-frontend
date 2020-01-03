@@ -3,9 +3,6 @@ import './Login.css'
 import userservices from '../../Services/userservice';
 
 
-
-
-//create form
 //onsubmit handler
 //calluser services obj use the handlers
 //services file is where fetch calls go
