@@ -1,51 +1,71 @@
 import React, { Component } from "react";
-import Register from "./Components/LoginRegister/Register";
-import { Route, BrowserRouter as Router } from "react-router-dom";
-import Login from './Components/LoginRegister/Login';
-import HandleLogin from './Services/userservice'
+import RegisterPage from "./Routes/RegisterPage";
+import { Route,Switch } from "react-router-dom";
+import LoginPage from './Routes/LoginPage';
 import HomePage from "./Components/HomePage";
-import "./App.css";
 import AddWorkout from "./Components/AddWorkout/AddWorkout";
+import PrivateRoute from './Components/Utils/PrivateRoute';
+import PublicOnlyRoute from './Components/Utils/PublicOnlyRoute';
+import NoPageFound from './Routes/NoPageFound';
+import "./App.css";
 
-// const User = ({match}) => {
-//   return (<h1> Welcome {match.params.username} </h1>)
-// }
+
 export class App extends Component {
   state={
+    hasError: false,
     loggedIn: false
+  }
+  static getDerrivedStateFromError(error) {
+    console.error(error)
+    return{hasError: true}
   }
   render() {
     return (
-      <div>
-        <Router>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
+      <div className="App">
 
-          <Route path="/Register">
-            <Register />
-          </Route>
-
-          {/* <Link to="/Login"> 
-            Login
-            <HandleLogin />
-          </Link>
-          <Link to="/Register"> Register </Link> */}
-
-          <Route path="/Login">
-            <Login />
-          </Route>
-          
-          <Route path="/AddWorkout">
-            <AddWorkout />
-          </Route>
-
-          {/* <Route path="/user/:username"component={User} /> */}
-
-        </Router>
+        <main className="App_main">
+          {this.state.hasError && <p className='red'> There was an Error!</p>}
+          <Switch>
+            <Route exact path={"/"}
+              component={HomePage}
+            />
+            <PublicOnlyRoute path={'/Login'}
+              component={LoginPage}
+            />
+            <PublicOnlyRoute path={'/Register'}
+              component={RegisterPage}
+            />
+            <PrivateRoute path={'/AddWorkout/:workoutsId'}
+              component={AddWorkout}
+            />
+            <Route 
+              component={NoPageFound}
+            />
+          </Switch>
+        </main>
       </div>
     );
   }
 }
 
 export default App;
+
+// Set up prior to 1/6
+// <Router>
+//           <Route exact path="/">
+//             <HomePage />
+//           </Route>
+
+//           <Route path="/Register">
+//             <Register />
+//           </Route>
+
+//           <Route path="/Login">
+//             <Login />
+//           </Route>
+          
+//           <Route path="/AddWorkout">
+//             <AddWorkout />
+//           </Route>
+
+//         </Router>
