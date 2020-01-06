@@ -10,15 +10,18 @@
   text-align: left;
   width: 100%;
   border-radius: 4px;
+  font-family:'Montserrat', sans-serif;
 }
 
 .Input::placeholder,
 .Textarea::placeholder {
   color: #ccc;
+  font-family:'Montserrat', sans-serif;
 }
 
 .Textarea {
   resize: vertical;
+  font-family:'Montserrat', sans-serif;
 }
 
 .Button {
@@ -32,7 +35,7 @@
 
 .Required {
   color: #CA1551;
-  font-family: Arial;
+  font-family:'Montserrat', sans-serif;
   font-weight: bold;
 }
 
@@ -43,4 +46,13 @@
 .Section--list {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+label {
+  font-family:'Montserrat', sans-serif;
+  text-align: left;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
 }

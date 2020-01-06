@@ -3,13 +3,17 @@ h1{
   text-align: center;
 }
 
-p{
+p {
   text-align: center;
   font-family:'Montserrat', sans-serif;
 }
 
-.buttons{
+.btn {
+  order: 1px solid #aaa;
+  background-color: #eee;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
 }

@@ -13,19 +13,17 @@ export default class Register extends Component {
 
  handleSubmit = event => {
   event.preventDefault();
-  const { first_name, last_name, user_name, user_email, password } = event.target
+  const { full_name, user_name, user_email, password } = event.target
 
   this.setState({error:null})
   AuthApiService.postUser({
-    first_name: first_name.value,
-    last_name: last_name.value,
+    full_name: full_name.value,
     user_name: user_name.value,
     user_email: user_email.value,
     password: password.value,
   })
   .then(user => {
-    first_name.value=''
-    last_name.value=''
+    full_name.value=''
     user_name.value=''
     user_email.value=''
     password.value=''
@@ -46,29 +44,24 @@ export default class Register extends Component {
             {error && <p className='red'>{error}</p>}
           </div>
 
-          <div className="first_name">
-            <label htmlFor="first_name"> First Name:<Required/> </label>
-            <Input required type="text" id="first_name" className="formInput" placeholder="First Name" name="first_name"/>
-          </div>
-
-          <div className="last_name">
-            <label htmlFor="last_name"> Last Name:<Required/> </label>
-            <Input  required type="text" id="last_name" className="formInput" placeholder="Last Name" name="last_name"/>
+          <div className="full_name">
+            <label htmlFor="full_name"> Full Name:<Required/> </label>
+            <Input required type="text" id="full_name" className="formInput" name="full_name"/>
           </div>
 
           <div className="user_name">
             <label htmlFor="username"> Username:<Required/> </label>
-            <Input required type="text" id="user_name" className="formInput" placeholder="Your Username" name="user_name"/>
+            <Input required type="text" id="user_name" className="formInput" name="user_name"/>
           </div>
 
           <div className="user_email">
             <label htmlFor="user_email"> Email:<Required/> </label>
-            <Input required type="email" id="user_email" className="formInput" placeholder="Your Email" name="user_email"/>  
+            <Input required type="email" id="user_email" className="formInput" name="user_email"/>  
           </div>
 
           <div className="password">
             <label htmlFor="password"> Password:<Required/> </label>
-            <Input required type="text" id="password" className="formInput" placeholder="Password" name="password"/>
+            <Input required type="text" id="password" className="formInput"/>
           </div>
 
           <div className="terms_agreement">
