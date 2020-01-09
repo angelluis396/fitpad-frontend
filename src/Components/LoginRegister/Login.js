@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
-import './Login.css';
 import TokenService from '../../Services/token-service';
 import AuthApiService from '../../Services/auth-api-service';
 import { Button, Input } from '../Utils/Utils'
+import Context from '../../Contexts/Context'
+import './Login.css';
+
 export default class Login extends Component {
+  static contextType = Context
   static defaultProps = {
-    onLoginSuccess: () => {} 
+    location: {},
+    history: {
+      push: () => {},
+    },
   }
-  state = { error: null }
+
+  state= { error: null }
+
+  // handleLoginSuccess = () => {
+  //   const { location, history } = this.props
+  //   const destination = (location.state || {}).from || '/home'
+  //   history.push(destination)
+  // }
 
   handleSubmitJwtAuth = event => {
     event.preventDefault()
@@ -22,7 +35,8 @@ export default class Login extends Component {
       user_email.value=''
       password.value=''
       TokenService.saveAuthToken(res.authToken)
-      this.props.onLoginSuccess()
+      this.context.setAuth(res.authToken)
+      this.onLoginSuccess()
     })
     .catch(res => {
       this.setState({error: res.error})
@@ -32,10 +46,6 @@ export default class Login extends Component {
     return (
       <div>
         <form className= "loginForm" onSubmit={this.handleSubmitJwtAuth}>
-
-          {/* <div role='alert'>
-            {error && <p className='red'>{error}</p>}
-          </div> */}
 
           <div className="user_email">
             <label htmlFor="email"> Email: </label>
@@ -50,6 +60,7 @@ export default class Login extends Component {
           <div className="Button">
             <Button type='submit'>  Login </Button>
           </div>
+
         </form>
      
       </div>

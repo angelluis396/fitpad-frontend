@@ -41,12 +41,12 @@ export default class Register extends Component {
         <form className="registerForm" onSubmit={this.handleSubmit}>
 
           <div role='alert'>
-            {error && <p className='red'>{error}</p>}
+            {error && <p className='red'>{error.message}</p>}
           </div>
 
           <div className="full_name">
-            <label htmlFor="full_name"> Full Name:<Required/> </label>
-            <Input required type="text" id="full_name" className="formInput" name="full_name"/>
+              <label htmlFor="full_name"> Full Name:<Required/> </label>
+              <Input required type="text" id="floatField" className="formInput" name="full_name"/>
           </div>
 
           <div className="user_name">

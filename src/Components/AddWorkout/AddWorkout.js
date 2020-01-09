@@ -1,21 +1,19 @@
 import React, { Component } from 'react'
+import ExerciseForm from './ExerciseForm';
+import { Button } from '../Utils/Utils';
 
 export class AddWorkout extends Component {
+  state={
+    visible: false
+  }
   render() {
+    const workoutForm = this.state.visible ? <ExerciseForm /> : null
     return (
       <div className="addWorkoutForm">
-        <button className="button"> Add A Workout </button>
-        <form className="addExercise">
-          <div className="exercise">
-            <label className=" exercise"> Exercise </label>
-            <input type="text" placeholder="Enter Exercise Name" />
-          </div>
-          <div className="sets">
-            <label className="sets"> Sets </label>
-            <button> Add Set </button>
-          </div>
-        </form>
+        <Button className="Button"onClick={()=> {this.setState({visible:true})}}> Add A Workout </Button>
+        {workoutForm}
       </div>
+        
     )
   }
 }
