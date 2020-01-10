@@ -19,12 +19,13 @@ export class ExerciseForm extends Component {
       workout_weight, 
       notes,
     } = e.target
-    
+      const user_id = 1
     FitpadApiService.postWorkout(
       exercise_name.value, 
       workout_set.value, 
       workout_rep.value, 
-      workout_weight.value, 
+      workout_weight.value,
+      user_id, 
       notes.value
     )
     .then(this.context.addWorkout)

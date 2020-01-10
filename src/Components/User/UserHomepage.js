@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AddWorkoutPage from '../../Routes/AddWorkoutPage'
 import { Link } from 'react-router-dom';
-
+import DisplayWorkouts from '../UserWorkouts/DisplayWorkouts';
 
 export class UserHomepage extends Component {
   
@@ -17,10 +17,10 @@ export class UserHomepage extends Component {
     return (
       <div>
         <h2> My Fitpad </h2>
-        <Link to="/add" className="link"> Add a workout </Link>
+        <Link to="/Add" className="link"> Add a workout </Link>
         
         <div className="myLoggedWorkouts">
-          <p> This is where your past logged lifts will live. </p>
+          <DisplayWorkouts />
         </div>
         
       </div>

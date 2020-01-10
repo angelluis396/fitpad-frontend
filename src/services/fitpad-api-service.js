@@ -4,7 +4,9 @@ import config from '../config';
 const FitpadApiService = {
   getWorkouts () {
     return fetch (`${config.API_ENDPOINT}/fitpadData`, {
+      method: 'GET',
       headers: {
+        'content-type' : 'application/json',
         authorization: `bearer ${TokenService.getAuthToken()}`
       }
     })
@@ -23,7 +25,7 @@ const FitpadApiService = {
       .then(e => Promise.reject(e)) : res.json()  
     );
   },
-  postWorkout(exercise_name, workout_set, workout_rep,workout_weight, notes) {
+  postWorkout(exercise_name, workout_set, workout_rep,workout_weight, user_id, notes) {
     return fetch(`${config.API_ENDPOINT}/fitpadData`, {
       method: 'POST',
       headers: {
@@ -34,17 +36,14 @@ const FitpadApiService = {
         exercise_name, 
         workout_set, 
         workout_rep,
-        workout_weight, 
+        workout_weight,
+        user_id, 
         notes
       })
     })
     .then( res => 
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()  
     )
-    .then(data => {
-      this.props.history.push('/UserHomepage')
-    })
-    
   }
 }
 

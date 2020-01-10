@@ -5,7 +5,8 @@ import AuthApiService from '../../Services/auth-api-service'
 
 
 export default class Register extends Component {
- static defaultProps = {
+ 
+  static defaultProps = {
    onRegistrationSuccess: () => {}
  }
 
@@ -16,7 +17,7 @@ export default class Register extends Component {
   const { full_name, user_name, user_email, password } = event.target
 
   this.setState({error:null})
-  AuthApiService.postUser({
+  AuthApiService.createUser({
     full_name: full_name.value,
     user_name: user_name.value,
     user_email: user_email.value,

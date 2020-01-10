@@ -4,6 +4,7 @@ import TokenService from '../../Services/token-service'
 
 export default class Header extends Component {
   handleLogOutClick = () => {
+    TokenService.clearAuthToken();
   }
   renderLogoutLink() {
     return (
@@ -17,13 +18,11 @@ export default class Header extends Component {
     return (
       <nav className='Header'>
         <h2> 
-          <Link to='/'>
-            FitPad
-          </Link>
+          <Link to='/'> </Link>
         </h2>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
-          : this.renderLoginLink()
+          : null
         }
       </nav>
     )

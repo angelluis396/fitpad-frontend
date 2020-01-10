@@ -15,7 +15,7 @@ const AuthApiService = {
       :res.json()
     );
   },
-  postUser(user){ 
+  createUser(user){ 
     return fetch(`${config.API_ENDPOINT}/users`,{
       method: 'POST',
       headers: {
