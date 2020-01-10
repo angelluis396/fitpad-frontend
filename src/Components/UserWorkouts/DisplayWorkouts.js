@@ -14,7 +14,7 @@ export class DisplayWorkouts extends Component {
   }
   getWorkouts = () => {
     FitpadApiService.getWorkouts()
-      .then(res => res.json())
+      
       .then(myWorkouts => this.setState({myWorkouts}))
       .catch((error) => {
         this.setState({error});
@@ -35,8 +35,13 @@ export class DisplayWorkouts extends Component {
       </div>
     ))
     console.log(myWorkouts)
+    if (this.state.error) {
+      return (
+        <div>{this.state.error.toString()}</div>
+      );
+    }
     return (
-      <div>My Lifts </div>
+      <div>{myWorkouts} </div>
     )
   }
 }
