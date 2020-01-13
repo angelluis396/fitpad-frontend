@@ -14,8 +14,8 @@ const FitpadApiService = {
       !res.ok ? res.json ().then(e => Promise.reject(e)) : res.json()  
     );
   },
-  getWorkout(workoutId) {
-    return fetch(`${config.API_ENDPOINT}/workouts/${workoutId}`, {
+  getWorkout(fitpadDataId) {
+    return fetch(`${config.API_ENDPOINT}/fitpadData/${fitpadDataId}`, {
       headers: {
         authorization: `bearer ${TokenService.getAuthToken()}`
       }
@@ -29,8 +29,8 @@ const FitpadApiService = {
     return fetch(`${config.API_ENDPOINT}/fitpadData`, {
       method: 'POST',
       headers: {
-        'content-type' : 'application/json',
-        authorization: `bearer ${TokenService.getAuthToken()}`
+        'content-type':'application/json',
+        authorization:`bearer ${TokenService.getAuthToken()}`
       },
       body: JSON.stringify({
         exercise_name, 

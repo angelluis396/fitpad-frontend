@@ -1,0 +1,52 @@
+
+.header {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 12px;
+  margin-top: 13px;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  border-bottom: 2px solid RGB(59,93,128);
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-form-text{
+  display: block;
+  width: auto;
+  margin: 16px 0;
+  border: 0;
+  background:	RGB(149 ,167 ,182);
+  padding: 20px 40px;
+  outline: none;
+  color:#ddd ;
+  transition: 0.5s;
+  border-radius: 6px;
+}
+
+.loginForm{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+/* .inputImg {
+  width: 16px;
+  position: absolute;
+  top: 10px;
+} */
+
+
+.inner-container {
+  transition: visibility 0.2s ease-out;
+}
+
+.inner-container.show {
+  visibility: visible;
+}

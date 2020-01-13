@@ -42,9 +42,9 @@ export class App extends Component {
       <Context.Provider value={value}>
 
       <div className="App">
-        <header className="appHeader">
+        {/* <header className="appHeader">
           <Header />
-        </header>
+        </header> */}
         <main className="App_main">
           {this.state.hasError && <p className='red'> There was an Error!</p>}
 

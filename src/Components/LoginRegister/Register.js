@@ -38,45 +38,29 @@ export default class Register extends Component {
   render() {
     const {error}=this.state;
     return (
-      <div>
-        <form className="registerForm" onSubmit={this.handleSubmit}>
 
-          <div role='alert'>
-            {error && <p className='red'>{error.message}</p>}
-          </div>
+      <div className="inner-container">
+        <div className="header">
+          Register
+        </div>
 
-          <div className="full_name">
-              <label htmlFor="full_name"> Full Name:<Required/> </label>
-              <Input required type="text" id="floatField" className="formInput" name="full_name"/>
-          </div>
+        <div className="box">
+          <form className="registerForm" onSubmit={this.handleSubmit}>
+            <div role='alert'>
+              {error && <p className='red'>{error.message}</p>}
+            </div>
 
-          <div className="user_name">
-            <label htmlFor="username"> Username:<Required/> </label>
-            <Input required type="text" id="user_name" className="formInput" name="user_name"/>
-          </div>
+            <Input required type="text" id="floatField" className="landing-form-text" name="full_name" placeholder="Full Name"/>
+        
+            <Input required type="text" id="user_name" className="landing-form-text" name="user_name" placeholder="Username"/>
+            
+            <Input required type="email" id="user_email" className="landing-form-text" name="user_email" placeholder="Email" />  
+            
+            <Input required type="text" id="password" className="landing-form-text" placeholder="Password" />
 
-          <div className="user_email">
-            <label htmlFor="user_email"> Email:<Required/> </label>
-            <Input required type="email" id="user_email" className="formInput" name="user_email"/>  
-          </div>
-
-          <div className="password">
-            <label htmlFor="password"> Password:<Required/> </label>
-            <Input required type="text" id="password" className="formInput"/>
-          </div>
-
-          <div className="terms_agreement">
-            <label className="formCheckBox">
-              <Input required className="formCheckBox" type="checkbox" name="hasAgreed" /> I Agree to the Terms and Conditions
-            </label>
-          </div>
-
-          <div className="FormField">
-            <Button type="submit"> Register </Button>
-          </div>
-         
-        </form>
-     
+            <Button className="form-btns" type="submit"> Register </Button>
+          </form>
+        </div>
       </div>
     )
   }

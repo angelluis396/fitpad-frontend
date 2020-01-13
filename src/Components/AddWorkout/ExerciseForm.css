@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'montserrat', sans-serif;
+}
+
+.exercise-form{
+  background:url(../../Photos/fitpadBackground.jpg) no-repeat center;
+  background-size: cover;
+  padding: 40px 0;
+}
+
+.exercise-form h1{
+  text-align: center;
+  color: black;
+}
+
+.border{
+  width: 100px;
+  height: 10px;
+  background-color:RGB(150,112,137);
+  margin: 40px auto;
+}
+
+.addExercise-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background:	RGB(149 ,167 ,182);
+  padding: 20px 40px;
+  outline: none;
+  color:#ddd ;
+  transition: 0.5s;
+}
+.form-text:focus{
+  box-shadow:0 0 10px 4px RGB(150,112,137) ;
+}
+
+textarea.form-text{
+  resize: none;
+  height: 120px;
+}
+
+.form-btn{
+  float: right;
+  border: 0;
+  background-color: #ddd;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.form-btn:hover{
+  background-color:RGB(176,136,145) ;
+}

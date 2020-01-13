@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Button, Input, Textarea } from '../Utils/Utils';
 import Context from '../../Contexts/Context';
 import FitpadApiService from '../../Services/fitpad-api-service';
-
+import './ExerciseForm.css'
 export class ExerciseForm extends Component {
   static defaultProps = {
     onAddWorkout: () =>{}
@@ -39,28 +39,33 @@ export class ExerciseForm extends Component {
     this.props.onAddWorkout();
   }
 
-  state={
-    visible: false
-  }
+  // state={
+  //   visible: false
+  // }
   render() {
     return (
-      <div>
-        <form className="addExercise" onSubmit={this.handleSubmit}>
-          <div className="exercise">
-            <label className=" exercise_name"> Exercise </label>
-              <Input name="exercise_name" type="text" placeholder="Enter Exercise Name" />
-          </div>
-          <div className="workoutNumbers">
-            <label className="sets"> Sets </label>
-              <Input name="workout_set" type="number" min="1" placeholder="Set"/>
-            <label className="reps"> Reps </label>
-              <Input name="workout_rep" type="number" min="1" placeholder="Reps"/>
-            <label className="weight"> Weight </label>
-              <Input name="workout_weight" type="number" min="1"placeholder="Weight" />
+      <div className="exercise-form">
+        <h1> Add A Workout </h1>
+        <form className="addExercise-form" onSubmit={this.handleSubmit}>
+
+        <div className="border"> </div>
+            <label className=" exercise_name"> Exercise: </label>
+              <Input className="form-text" name="exercise_name" type="text" placeholder="Enter Exercise Name" />
+
+            <label className="sets"> Sets: </label>
+              <Input className="form-text" name="workout_set" type="number" min="1" placeholder="Set"/>
+
+            <label className="reps"> Reps: </label>
+              <Input className="form-text" name="workout_rep" type="number" min="1" placeholder="Reps"/>
+
+            <label className="weight"> Weight: </label>
+              <Input className="form-text" name="workout_weight" type="number" min="1"placeholder="Weight" />
+
             <label className="notes"> Notes: </label>
-              <Textarea name="notes" id="workoutNotes"/>
-            <Button type="submit"> Log Workout </Button>
-          </div>
+              <Textarea className="form-text" name="notes" id="workoutNotes"/>
+            <Button className="form-btn" type="submit"> Log Workout </Button>
+         
+
         </form>
       </div>
     )

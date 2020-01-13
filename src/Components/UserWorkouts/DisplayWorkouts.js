@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import FitpadApiService from '../../Services/fitpad-api-service'
+import './DisplayWorkouts.css';
 
-export class DisplayWorkouts extends Component {
+export default class DisplayWorkouts extends Component {
   constructor(props) {
     super(props)
     this.state={
@@ -26,15 +27,15 @@ export class DisplayWorkouts extends Component {
   render() {
     
     const myWorkouts = this.state.myWorkouts.map((myWorkout, idx)=> (
-      <div key={idx}>
-        <span className="exerciseName">{myWorkout.exercise_name} </span> 
-        <span className="set">{myWorkout.workout_set} </span>
-        <span className="rep">{myWorkout.workout_rep} </span>
-        <span className="weight">{myWorkout.workout_weight} </span>
-        <span className="notes">{myWorkout.notes} </span>
+      <div className="userWorkouts" key={idx}>
+        <ul className="exerciseName">{myWorkout.exercise_name} </ul> 
+          <li className="set">{myWorkout.workout_set} </li>
+          <li className="rep">{myWorkout.workout_rep} </li>
+          <li className="weight">{myWorkout.workout_weight} </li>
+          <li className="notes">{myWorkout.notes} </li>
       </div>
     ))
-    console.log(myWorkouts)
+
     if (this.state.error) {
       return (
         <div>{this.state.error.toString()}</div>
@@ -45,5 +46,3 @@ export class DisplayWorkouts extends Component {
     )
   }
 }
-
-export default DisplayWorkouts

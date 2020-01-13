@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import AddWorkoutPage from '../../Routes/AddWorkoutPage'
 import { Link } from 'react-router-dom';
 import DisplayWorkouts from '../UserWorkouts/DisplayWorkouts';
-
+import './UserHome.css'
 export class UserHomepage extends Component {
   
   // FitpadApiService.getWorkouts (
@@ -15,8 +15,8 @@ export class UserHomepage extends Component {
   // .then(this.context.getWorkouts)
   render() {
     return (
-      <div>
-        <h2> My Fitpad </h2>
+      <div className="displayWorkouts">
+        <h1> My Fitpad </h1>
         <Link to="/Add" className="link"> Add a workout </Link>
         
         <div className="myLoggedWorkouts">

@@ -1,0 +1,7 @@
+.userWorkouts > ul li {
+  list-style-type: none;
+}
+
+.userWorkouts {
+  border: solid grey;
+}

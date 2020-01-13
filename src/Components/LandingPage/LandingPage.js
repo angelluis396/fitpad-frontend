@@ -7,26 +7,51 @@ import Register from '../LoginRegister/Register';
 import './LandingPage.css'
 
 export default class LandingPage extends Component {
-  // handleLogOutClick = () => {
-  //   TokenService.clearAuthToken()
-  // }
-  // renderLogoutLink() {
-  //   return (
-  //     <div className='Header_Logged_In'>
-  //       <Link onClick={this.handleLogOutClick} to='/'> Logout</Link>
-  //     </div>
-  //   )
-  // }
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       isLoginOpen: true,
+       isRegisterOpen: false
+    }
+  }
+ 
+  showLoginBox() {
+    this.setState({isLoginOpen: true, isRegisterOpen: false})
+  }
+  showRegisterBox(){
+    this.setState({isRegisterOpen: true, isLoginOpen: false})
+  }
+  
   render() {
     return (
-      <div>
-        <h1> Welcome to FitPad </h1>
-        <p> The FitPad aims to make tracking your weight lifting progress simple and fun. Register to start tracking your Gains! </p>
-        <div className="buttons">
-          <Link to="/Login"><Button> Log In </Button></Link>
-          <Link to="/Register"><Button onClick={this.Register}> Register </Button></Link>
+      <div className="root-container">
+        <h1> Welcome To FitPad </h1>
+        <div className="border" />
+          
+          
+          <div className="box-controller">
+
+            <div className={"controller" + (this.state.isLoginOpen ? "selected-controller" : "")}
+              onClick={this.showLoginBox.bind(this)}> 
+                Login 
+            </div>
+
+            <div className={"controller" + (this.state.isRegisterOpen ? "selected-controller" : "")}
+              onClick={this.showRegisterBox.bind(this)}>
+                Register
+            </div> 
+
+          </div>
+
+          <div className="box-container">
+            {this.state.isLoginOpen && <Login />}
+            {this.state.isRegisterOpen && <Register />}
+            
+            
+          </div>
+
         </div>
-      </div>
     )
   }
 }

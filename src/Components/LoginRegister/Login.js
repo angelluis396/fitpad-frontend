@@ -3,6 +3,8 @@ import TokenService from '../../Services/token-service';
 import AuthApiService from '../../Services/auth-api-service';
 import { Button, Input } from '../Utils/Utils'
 import Context from '../../Contexts/Context'
+import UserIcon from '../../Photos/userIcon.svg';
+import PasswordIcon from '../../Photos/passwordIcon.svg'
 import './Login.css';
 
 export default class Login extends Component {
@@ -13,14 +15,8 @@ export default class Login extends Component {
       push: () => {},
     },
   }
-
+  
   state= { error: null }
-
-  // handleLoginSuccess = () => {
-  //   const { location, history } = this.props
-  //   const destination = (location.state || {}).from || '/home'
-  //   history.push(destination)
-  // }
 
   handleSubmitJwtAuth = event => {
     event.preventDefault()
@@ -44,26 +40,34 @@ export default class Login extends Component {
   }
   render() {
     return (
-      <div>
-        <form className= "loginForm" onSubmit={this.handleSubmitJwtAuth}>
+        <div className="inner-container">
+          <div className="header">
+            Login
+          </div> 
+          
+          <div className="box">
+            <form className= "loginForm" onSubmit={this.handleSubmitJwtAuth}>
+              <Input className="landing-form-text" required type="email" id="user_email" placeholder="Your Email" name="user_email"/>
 
-          <div className="user_email">
-            <label htmlFor="email"> Email: </label>
-            <Input required type="email" id="user_email" placeholder="Your Email" name="user_email"/>  
+              <Input className="landing-form-text" required type="password" id="password" name="password" placeholder="Password"/>
+
+              <Button className="form-btns" type='submit'>  Login </Button>
+            </form>
           </div>
+          
 
-          <div className="password">
-            <label htmlFor="password"> Password: </label>
-            <Input required type="password" id="password" name="password" placeholder="Password"/>
-          </div>
+    
+            
+              {/* <img className="inputImg" src={UserIcon} />  */}
+          
+            
+              {/* <img className="inputImg" src={PasswordIcon} /> */}
+           
 
-          <div className="Button">
-            <Button type='submit'>  Login </Button>
-          </div>
-
-        </form>
-     
-      </div>
+            
+              
+          
+        </div>
     )
   }
 }
