@@ -15,12 +15,7 @@ export default class Login extends Component {
       push: () => {},
     },
   }
-  
-  handleLoginSuccess = () => {
-    const { location, history } = this.props
-    const destination = (location.state || {}).from || '/home'
-    history.push(destination)
-  }
+
 
   state= { error: null }
 
@@ -38,7 +33,7 @@ export default class Login extends Component {
       password.value=''
       TokenService.saveAuthToken(res.authToken)
       this.context.setAuth(res.authToken)
-      this.handleLoginSuccess()
+      this.props.onLoginSuccess()
     })
     .catch(error => {
       console.log(error);
