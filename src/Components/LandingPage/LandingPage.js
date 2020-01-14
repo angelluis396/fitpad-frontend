@@ -7,15 +7,28 @@ import Register from '../LoginRegister/Register';
 import './LandingPage.css'
 
 export default class LandingPage extends Component {
-  constructor(props) {
-    super(props)
+  // constructor(props) {
+  //   super(props)
   
-    this.state = {
+    state = {
        isLoginOpen: true,
        isRegisterOpen: false
     }
+  // }
+
+  static defaultProps = {
+    location: {},
+    history: {
+      push: () => {},
+    },
   }
- 
+
+  handleLoginSuccess = () => {
+    const { location, history } = this.props
+    const destination = (location.state || {}).from || '/home'
+    history.push(destination)
+  }
+
   showLoginBox() {
     this.setState({isLoginOpen: true, isRegisterOpen: false})
   }
@@ -45,7 +58,7 @@ export default class LandingPage extends Component {
           </div>
 
           <div className="box-container">
-            {this.state.isLoginOpen && <Login />}
+            {this.state.isLoginOpen && <Login onLoginSuccess={this.handleLoginSuccess} />}
             {this.state.isRegisterOpen && <Register />}
             
             
