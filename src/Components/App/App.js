@@ -58,9 +58,14 @@ export class App extends Component {
             <PublicOnlyRoute path={'/Register'}
               component={RegisterPage}
             />
-            <PrivateRoute exact path={'/Add'}
+            <PublicOnlyRoute exact path={'/Add'}
               component={AddWorkoutPage}
             />
+
+            {/* <PrivateRoute exact path={'/Add'}
+              component={AddWorkoutPage}
+            /> */}
+
             <PrivateRoute exact path={'/Home'}
               component={UserHomepage}
             />
