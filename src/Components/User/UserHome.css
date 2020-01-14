@@ -3,11 +3,10 @@
   background:url(../../Photos/fitpadBackground.jpg) no-repeat center;
   background-size: cover;
 }
-.header {
+h1 {
   text-align: center;
   padding: 5px;
   margin-bottom: 12px;
-  margin-top: 13px;
   margin-left: 35px;
   margin-right: 35px;
   font-family: 'Montserrat', sans-serif;

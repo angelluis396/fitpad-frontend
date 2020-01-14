@@ -58,7 +58,7 @@ export default class LandingPage extends Component {
           </div>
 
           <div className="box-container">
-            {this.state.isLoginOpen && <Login onLoginSuccess={this.handleLoginSuccess} />}
+          {this.state.isLoginOpen && <Login handleLoginSuccess={this.handleLoginSuccess} />}
             {this.state.isRegisterOpen && <Register />}
             
             

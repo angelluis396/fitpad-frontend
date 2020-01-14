@@ -28,11 +28,13 @@ export default class DisplayWorkouts extends Component {
     
     const myWorkouts = this.state.myWorkouts.map((myWorkout, idx)=> (
       <div className="userWorkouts" key={idx}>
-        <ul className="exerciseName">{myWorkout.exercise_name} </ul> 
+        <ul className="exerciseName">{myWorkout.exercise_name} 
           <li className="set">{myWorkout.workout_set} </li>
           <li className="rep">{myWorkout.workout_rep} </li>
           <li className="weight">{myWorkout.workout_weight} </li>
           <li className="notes">{myWorkout.notes} </li>
+          <button> Delete... </button>
+        </ul> 
       </div>
     ))
 
