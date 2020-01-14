@@ -5,15 +5,6 @@ import DisplayWorkouts from '../UserWorkouts/DisplayWorkouts';
 import '../../Styles/UserHome.css';
 
 export class UserHomepage extends Component {
-  
-  // FitpadApiService.getWorkouts (
-  //   exercise_name.value, 
-  //   workout_set.value, 
-  //   workout_rep.value, 
-  //   workout_weight.value, 
-  //   notes.value
-  // )
-  // .then(this.context.getWorkouts)
   render() {
     return (
       <div className="displayWorkouts">

@@ -13,7 +13,7 @@ import UserHomepage from "../User/UserHomepage";
 import Login from '../LoginRegister/Login';
 
 // import "./App.css";
-import Header from "../Header/Header";
+import Header from "../NavMenu/NavMenu";
 
 
 
@@ -42,9 +42,9 @@ export class App extends Component {
       <Context.Provider value={value}>
 
       <div className="App">
-        <header className="appHeader">
+        {/* <header className="appHeader">
           <Header />
-        </header>
+        </header> */}
         <main className="App_main">
           {this.state.hasError && <p className='red'> There was an Error!</p>}
 
@@ -62,13 +62,17 @@ export class App extends Component {
               component={AddWorkoutPage}
             />
 
+            <PublicOnlyRoute exact path={'/Home'}
+              component={UserHomepage}
+            />
+
             {/* <PrivateRoute exact path={'/Add'}
               component={AddWorkoutPage}
             /> */}
 
-            <PrivateRoute exact path={'/Home'}
+            {/* <PrivateRoute exact path={'/Home'}
               component={UserHomepage}
-            />
+            /> */}
             <Route 
               component={NoPageFound}
             />
