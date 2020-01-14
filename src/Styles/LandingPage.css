@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 .root-container{
-  background:url(../../Photos/fitpadBackground.jpg) no-repeat center;
+  background:url(../Photos/fitpadBackground.jpg) no-repeat center;
   background-size: cover;
 }
 

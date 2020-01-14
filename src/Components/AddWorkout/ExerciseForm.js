@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { Button, Input, Textarea } from '../Utils/Utils';
 import Context from '../../Contexts/Context';
 import FitpadApiService from '../../Services/fitpad-api-service';
-import './ExerciseForm.css'
+import '../../Styles/ExerciseForm.css';
+
 export class ExerciseForm extends Component {
   static defaultProps = {
     onAddWorkout: () =>{}
@@ -16,16 +17,17 @@ export class ExerciseForm extends Component {
       exercise_name, 
       workout_set, 
       workout_rep, 
-      workout_weight, 
+      workout_weight,
+      // user_id, 
       notes,
     } = e.target
-      const user_id = 1
+      // const user_id = 1
     FitpadApiService.postWorkout(
       exercise_name.value, 
       workout_set.value, 
       workout_rep.value, 
       workout_weight.value,
-      user_id, 
+      // user_id.value, 
       notes.value
     )
     .then(this.context.addWorkout)
@@ -33,7 +35,8 @@ export class ExerciseForm extends Component {
       exercise_name.value=''; 
       workout_set.value=''; 
       workout_rep.value='';
-      workout_weight.value='' 
+      workout_weight.value='' ;
+      // user_id.value="";
       notes.value='';
     })
     this.props.onAddWorkout();

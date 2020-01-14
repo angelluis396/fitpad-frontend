@@ -5,7 +5,7 @@ import { Button, Input } from '../Utils/Utils'
 import Context from '../../Contexts/Context'
 import UserIcon from '../../Photos/userIcon.svg';
 import PasswordIcon from '../../Photos/passwordIcon.svg'
-import './Login.css';
+import '../../Styles/Login.css';
 
 export default class Login extends Component {
   static contextType = Context

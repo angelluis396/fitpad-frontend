@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import FitpadApiService from '../../Services/fitpad-api-service'
-import './DisplayWorkouts.css';
+import '../../Styles/DisplayWorkouts.css';
 
 export default class DisplayWorkouts extends Component {
   constructor(props) {
@@ -33,7 +33,6 @@ export default class DisplayWorkouts extends Component {
           <li className="rep">{myWorkout.workout_rep} </li>
           <li className="weight">{myWorkout.workout_weight} </li>
           <li className="notes">{myWorkout.notes} </li>
-          <button> Delete... </button>
         </ul> 
       </div>
     ))

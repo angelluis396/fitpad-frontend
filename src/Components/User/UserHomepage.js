@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import AddWorkoutPage from '../../Routes/AddWorkoutPage'
 import { Link } from 'react-router-dom';
 import DisplayWorkouts from '../UserWorkouts/DisplayWorkouts';
-import './UserHome.css'
+import '../../Styles/UserHome.css';
+
 export class UserHomepage extends Component {
   
   // FitpadApiService.getWorkouts (

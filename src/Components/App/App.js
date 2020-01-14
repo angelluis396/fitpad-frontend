@@ -12,7 +12,7 @@ import AddWorkoutPage from "../../Routes/AddWorkoutPage";
 import UserHomepage from "../User/UserHomepage";
 import Login from '../LoginRegister/Login';
 
-import "./App.css";
+// import "./App.css";
 import Header from "../Header/Header";
 
 

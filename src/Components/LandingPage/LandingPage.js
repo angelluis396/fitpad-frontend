@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '../Utils/Utils';
 import Login from '../LoginRegister/Login';
 import Register from '../LoginRegister/Register';
-// import TokenService from '../Services/token-service'
-import './LandingPage.css'
+import '../../Styles/LandingPage.css';
 
 export default class LandingPage extends Component {
   // constructor(props) {

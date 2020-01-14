@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Input, Required } from '../Utils/Utils'
-import './Register.css'
+import '../../Styles/Register.css';
 import AuthApiService from '../../Services/auth-api-service'
 
 
