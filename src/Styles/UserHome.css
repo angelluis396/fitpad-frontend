@@ -1,11 +1,12 @@
 
-.displayWorkouts{
+/* .displayWorkouts{
   background:url(../Photos/fitpadBackground.jpg) no-repeat center;
   background-size: cover;
-}
+} */
 h1 {
   text-align: center;
   padding: 5px;
+  margin-top: 35px;
   margin-bottom: 12px;
   margin-left: 35px;
   margin-right: 35px;

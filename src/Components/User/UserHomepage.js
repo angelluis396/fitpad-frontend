@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import DisplayWorkouts from '../UserWorkouts/DisplayWorkouts';
 import '../../Styles/UserHome.css';
 
-export class UserHomepage extends Component {
+export default class UserHomepage extends Component {
   render() {
     return (
       <div className="displayWorkouts">
@@ -19,19 +19,3 @@ export class UserHomepage extends Component {
     )
   }
 }
-
-export default UserHomepage
-
-
-
-
-// state={
-  //   UserWorkouts: [],
-  //   error: null
-  // }
-  // setUserWorkouts = workouts => {
-  //   this.setState({
-  //     workouts,
-  //     error:null,
-  //   })
-  // }

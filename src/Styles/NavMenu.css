@@ -1,0 +1,100 @@
+nav {
+  background-color:rgba(150, 168, 188) ;
+}
+.navBar {
+  display: inline-block;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 10;
+  padding: 5px;
+}
+
+.navContents {
+  display: inline-block;
+  position: fixed;
+  padding-bottom: 25px;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 10;
+  /* padding: 5px; */
+  background-color:rgba(150, 168, 188)
+}
+
+.fullname {
+  display: inline;
+  text-decoration: none;
+  color: white;
+  padding-top: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+.burgerIcon {
+  position: absolute;
+  top:0;
+  right:0;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 5px;
+  margin-top: 50px;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 0px;
+}
+
+li {
+  display: inline;
+  text-align: right;
+}
+
+li a {
+  padding: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.null {
+  display: none;
+}
+
+@media screen (min-width: 620px) {
+  .links {
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-content:center;
+    margin:5px;
+    overflow:hidden;
+    padding:0;
+  }
+  .navContents{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .burgerIcon{
+    display: none;
+  }
+  .navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -12,8 +12,8 @@ import AddWorkoutPage from "../../Routes/AddWorkoutPage";
 import UserHomepage from "../User/UserHomepage";
 import Login from '../LoginRegister/Login';
 
-// import "./App.css";
-import Header from "../NavMenu/NavMenu";
+// import "../../Styles/App.css";
+import NavMenu from "../NavMenu/NavMenu";
 
 
 
@@ -42,9 +42,8 @@ export class App extends Component {
       <Context.Provider value={value}>
 
       <div className="App">
-        {/* <header className="appHeader">
-          <Header />
-        </header> */}
+        <NavMenu />
+
         <main className="App_main">
           {this.state.hasError && <p className='red'> There was an Error!</p>}
 
@@ -58,21 +57,22 @@ export class App extends Component {
             <PublicOnlyRoute path={'/Register'}
               component={RegisterPage}
             />
-            <PublicOnlyRoute exact path={'/Add'}
+            {/* <PublicOnlyRoute exact path={'/Add'}
               component={AddWorkoutPage}
             />
 
             <PublicOnlyRoute exact path={'/Home'}
               component={UserHomepage}
+            /> */}
+
+            <PrivateRoute exact path={'/Add'}
+              component={AddWorkoutPage}
             />
 
-            {/* <PrivateRoute exact path={'/Add'}
-              component={AddWorkoutPage}
-            /> */}
-
-            {/* <PrivateRoute exact path={'/Home'}
+            <PrivateRoute exact path={'/Home'}
               component={UserHomepage}
-            /> */}
+            />
+
             <Route 
               component={NoPageFound}
             />

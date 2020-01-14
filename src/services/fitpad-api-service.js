@@ -44,6 +44,15 @@ const FitpadApiService = {
     .then( res => 
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()  
     )
+  },
+  getFullName(){
+    return fetch(`${config.API_ENDPOINT}/users/home`, {
+      method: 'GET',
+      headers: {
+        'content-type':'application/json',
+        authorization:`bearer ${TokenService.getAuthToken()}`
+      }
+    })
   }
 }
 
