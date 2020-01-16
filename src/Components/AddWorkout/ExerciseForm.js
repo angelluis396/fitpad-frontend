@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, Input, Textarea } from '../Utils/Utils';
 import Context from '../../Contexts/Context';
 import FitpadApiService from '../../Services/fitpad-api-service';
+import MusclesDropDown from '../DropDowns/MusclesDropDown'
 import '../../Styles/ExerciseForm.css';
 
 export class ExerciseForm extends Component {
@@ -52,6 +53,7 @@ export class ExerciseForm extends Component {
         <form className="addExercise-form" onSubmit={this.handleSubmit}>
 
         <div className="border"> </div>
+            <MusclesDropDown />
             <label className=" exercise_name"> Exercise: </label>
               <Input className="form-text" name="exercise_name" type="text" placeholder="Enter Exercise Name" />
 
