@@ -1,0 +1,99 @@
+{
+  "exercises" : {
+    "shoulders" : [
+      {"exercise": "Barbell Upright Row" },
+      {"exercise": "Standing Military Press " },
+      {"exercise": "Palms-In DB Press" },
+      {"exercise": "Shoulder Press" },
+      {"exercise": "Lateral Raise" },
+      {"exercise": "Bent-Over Rear Delt Raise" },
+      {"exercise": "Lying Rear Delt Raise" },
+      {"exercise": "DB Upright Row" }
+    ],
+    "biceps":[
+      {"exercise":"Barbell Biceps Curl" },
+      {"exercise":"Close-Grip Barbell Biceps Curl" },
+      {"exercise":"Forward Lying Barbell Biceps Curl" },
+      {"exercise":"Reverse Barbell Biceps Curl" },
+      {"exercise":"Hammer Curl" },
+      {"exercise":"Seated Biceps Curl" },
+      {"exercise":"Incline Biceps Curl" },
+      {"exercise":"Seated Concentration Curl" },
+      {"exercise":"Standing Biceps Curl" }
+    ],
+    "triceps":[
+      {"exercise": "Barbell Triceps Extension (Behind the neck)" },
+      {"exercise": "Lying Barbell Triceps Extension (skull crusher)" },
+      {"exercise": "Close Grip Bench Press" },
+      {"exercise": "One arm Triceps Extension" },
+      {"exercise": "Triceps Kickback" },
+      {"exercise": "DB Lying Triceps Extension" },
+      {"exercise": "Cable Triceps Extension" },
+      {"exercise": "Single Arm Cable Triceps Extension" },
+      {"exercise": "Pyramid Push ups" },
+      {"exercise": "Weighted Dips" }
+    ],
+    "forearms":[
+      {"exercise": "wrist curls" },
+      {"exercise": "plate holds"}
+    ],
+    "chest":[
+      {"exercise": "Flat Bench Press" },
+      {"exercise": "Incline Bench Press" },
+      {"exercise": "Decline Bench Press" },
+      {"exercise": "Barbell Pullover" },
+      {"exercise": "Low Cable Crossover" },
+      {"exercise": "Cable Crossover" },
+      {"exercise": "Chest Press" }
+    ],
+    "traps":[
+      {"exercise": "Barbell Shoulder Shrugs"},
+      {"exercise": "Seated Cable Row" },
+      {"exercise": "Cable Face Pulls" },
+      {"exercise": "DB Shoulder Shrugs"}
+    ],
+    "lats":[
+      {"exercise": "Wide Grip Pull Up" },
+      {"exercise": "Lat Pull Down" },
+      {"exercise": "Bent Over Row" },
+      {"exercise": "DB Row" },
+      {"exercise": "T-Bar Row" }
+    ],
+    "abs":[
+      {"exercise": "Leg Raises" },
+      {"exercise": "Plank" },
+      {"exercise": "Roll Outs" },
+      {"exercise": "Flutter Kicks" },
+      {"exercise": "Sit Ups" },
+      {"exercise": "Crunches" }
+    ],
+    "hamstrings":[
+      {"exercise": "Hip Thrust" },
+      {"exercise": "Cable Pull Through" },
+      {"exercise": "Barbell Squat" },
+      {"exercise": "Dead Lift" },
+      {"exercise": "DB Lunges" },
+      {"exercise": "Leg Press" },
+      {"exercise": "Machine Leg Curl" }
+    ],
+    "quads":[
+      {"exercise": "Barbell Front Squat" },
+      {"exercise": "Leg Extensions" },
+      {"exercise": "Bulgarian Split Squat" },
+      {"exercise": "Goblet Squat" },
+      {"exercise": "Deficit Sumo Squat"}
+    ],
+    "glutes":[
+      {"exercise": "Kickbacks" },
+      {"exercise": "Romanian Deadlifts" },
+      {"exercise": "Hip Thrust" },
+      {"exercise" :"Band-Resisted Hip Abduction Squats"}
+    ],
+    "calfs": [
+      {"exercise": "Barbell Calf raises" },
+      {"exercise": "Seated Calf raises" },
+      {"exercise": "Farmers Walks On Toes" }
+    ]
+  }
+}
+

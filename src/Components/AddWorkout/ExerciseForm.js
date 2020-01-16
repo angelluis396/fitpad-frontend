@@ -3,6 +3,8 @@ import { Button, Input, Textarea } from '../Utils/Utils';
 import Context from '../../Contexts/Context';
 import FitpadApiService from '../../Services/fitpad-api-service';
 import MusclesDropDown from '../DropDowns/MusclesDropDown'
+import ExerciseDropDown from '../DropDowns/ExerciseDropDown'
+
 import '../../Styles/ExerciseForm.css';
 
 export class ExerciseForm extends Component {
@@ -19,16 +21,14 @@ export class ExerciseForm extends Component {
       workout_set, 
       workout_rep, 
       workout_weight,
-      // user_id, 
       notes,
     } = e.target
-      // const user_id = 1
+    
     FitpadApiService.postWorkout(
       exercise_name.value, 
       workout_set.value, 
       workout_rep.value, 
       workout_weight.value,
-      // user_id.value, 
       notes.value
     )
     .then(this.context.addWorkout)
@@ -37,15 +37,12 @@ export class ExerciseForm extends Component {
       workout_set.value=''; 
       workout_rep.value='';
       workout_weight.value='' ;
-      // user_id.value="";
       notes.value='';
     })
     this.props.onAddWorkout();
   }
 
-  // state={
-  //   visible: false
-  // }
+ 
   render() {
     return (
       <div className="exercise-form">
@@ -54,6 +51,8 @@ export class ExerciseForm extends Component {
 
         <div className="border"> </div>
             <MusclesDropDown />
+            <ExerciseDropDown />
+
             <label className=" exercise_name"> Exercise: </label>
               <Input className="form-text" name="exercise_name" type="text" placeholder="Enter Exercise Name" />
 

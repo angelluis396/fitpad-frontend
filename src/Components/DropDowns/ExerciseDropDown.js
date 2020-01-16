@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+const exercises = require('./exercises.json');
 
 export default class ExerciseDropDown extends Component {
   constructor(props) {
     super(props)
     this.state = {
-       value: "Shoulders"
+      exercises: {},
+      exercise: ""
     }
     this.handleSubmit.bind(this)
   }
@@ -13,26 +15,27 @@ export default class ExerciseDropDown extends Component {
   handleSubmit(event) {}
   
   handleChange = event => {
-    this.setState({value: event.target.value})
+    this.setState({exercise: event.target.value})
+  }
+
+  componentDidMount() {
+    const exercises = require("./exercises.json");
+    this.setState({ exercises:exercises });
   }
 
   render() {
+    // const exercises = require('./exercises.json');
+    const exercises = this.state.exercises;
+    const exercise = this.state.exercise;
     return (
       <form>
-        <label> Exercise:
-          <select value={this.state.value} onChange={this.handleChange}>
-            <option value="shoulders"> Shoulder's </option>
-            <option value="biceps"> Bicep's </option>
-            <option value="triceps"> Tricep's </option>
-            <option value="forearms"> Forearm's </option>
-            <option value="chest"> Chest </option>
-            <option value="traps"> Trap's </option>
-            <option value="lats"> Lat's </option>
-            <option value="abs"> Ab's </option>
-            <option value="hamstrings"> Hamstring's </option>
-            <option value="quads"> Quad's </option>
-            <option value="glutes"> Glutes </option>
-            <option value="calves"> Calves </option>
+        <label> Pick an Exercise
+          <select>
+            {Object.keys(exercises).map(item => (
+              <option key={item.id} value={item.exercise}> {item.exercise} </option>
+            ))}
+            {console.log(this.state.exercises)}
+            {console.log(this.state.exercises.data[0])}
           </select>
 
         </label>

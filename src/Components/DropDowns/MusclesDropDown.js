@@ -1,23 +1,12 @@
 import React, { Component } from 'react'
+const muscles = require('./muscles.json');
 
 export default class MusclesDropDown extends Component {
   constructor(props) {
     super(props)
     this.state = {
-       muscles: [
-        {id:"1", muscle: "Shoulder's"},
-        {id:"2", muscle: "Bicep's"},
-        {id:"3", muscle: "Tricep's"},
-        {id:"4", muscle: "Forearm's"},
-        {id:"5", muscle: "Chest"},
-        {id:"6", muscle: "Trap's"},
-        {id:"7", muscle: "Lat's"},
-        {id:"8", muscle: "Ab's"},
-        {id:"9", muscle: "Hamstring's"},
-        {id:"10", muscle: "Quad's"},
-        {id:"11", muscle: "Glutes"},
-        {id:"12", muscle: "Calves"}
-       ]
+       muscles: [],
+       muscle: ""
     }
     this.handleSubmit.bind(this)
   }
@@ -26,22 +15,63 @@ export default class MusclesDropDown extends Component {
   handleSubmit(event) {}
   
   handleChange = event => {
-    this.setState({value: event.target.value})
+    this.setState({muscle: event.target.value})
+  }
+
+  getUnique(arr, comp) {
+    const unique = arr
+      .map(e => e[comp])
+      .map((e, i , final) => final.indexOf(e) === i && i)
+      .filter(e => arr[e]);
+    return unique;
+  }
+  
+  componentDidMount() {
+    const muscles = require("./muscles.json");
+    this.setState({ muscles:muscles });
   }
 
   render() {
+    
+    // const muscles = require('./muscles.json');
+    const uniqueMuscle = this.getUnique(this.state.muscles, "tag")
+    const muscles = this.state.muscles;
+    const muscle = this.state.muscle;
+    // const filterDropDown = muscles.filter(function(result) {
+    //   return result.tag === muscle;
+    // });
+
     return (
+      
       <form>
         <label> Select a Muscle 
-          <select>
-            {this.state.muscles.map(item => (
-              <option key={item.id} value={item.muscle}>
-                {item.muscle}
+          <select 
+            value={this.state.muscle} 
+            onChange={this.handleChange}
+          >
+            {this.state.muscles.map(muscle => (
+              <option key={muscle.id} value={muscle.tag}>
+                {muscle.tag}
               </option>
             ))}
-          </select>
 
+            {/* {uniqueMuscle.map(muscle => (
+              <option key={muscle.id} value={muscle.tag}>
+                {muscle.tag}
+              </option>
+            ))} */}
+
+          </select>
         </label>
+        <input type="submit" value="Submit" />
+        <div> 
+          {/* {filterDropDown.map(muscle => (
+            <div key={muscle.id} style={{margin:"10px"}}>
+              {muscle.muscle}
+              <br />
+            </div>
+          ))} */}
+        </div>
       </form>
     )
   }
