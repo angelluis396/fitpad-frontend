@@ -1,14 +1,14 @@
 [
-  {"id": "1", "muscle": "Shoulder's", "tag":"shoulders"},
-  {"id": "2", "muscle": "Bicep's", "tag":"biceps"},
-  {"id": "3", "muscle": "Tricep's", "tag":"triceps"},
-  {"id": "4", "muscle": "Forearm's", "tag":"forearms"},
+  {"id": "1", "muscle": "Shoulders", "tag":"shoulders"},
+  {"id": "2", "muscle": "Biceps", "tag":"biceps"},
+  {"id": "3", "muscle": "Triceps", "tag":"triceps"},
+  {"id": "4", "muscle": "Forearms", "tag":"forearms"},
   {"id": "5", "muscle": "Chest", "tag":"chest"},
-  {"id": "6", "muscle": "Trap's", "tag":"traps"},
-  {"id": "7", "muscle": "Lat's", "tag":"lats"},
-  {"id": "8", "muscle": "Ab's", "tag":"abs"},
-  {"id": "9", "muscle": "Hamstring's", "tag":"hamstrings"},
-  {"id": "10", "muscle": "Quad's", "tag":"quads"},
+  {"id": "6", "muscle": "Traps", "tag":"traps"},
+  {"id": "7", "muscle": "Lats", "tag":"lats"},
+  {"id": "8", "muscle": "Abs", "tag":"abs"},
+  {"id": "9", "muscle": "Hamstrings", "tag":"hamstrings"},
+  {"id": "10", "muscle": "Quads", "tag":"quads"},
   {"id": "11", "muscle": "Glutes", "tag":"glutes"},
   {"id": "12", "muscle": "Calves", "tag":"calves"}
 ]

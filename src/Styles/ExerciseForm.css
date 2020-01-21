@@ -28,16 +28,29 @@
   padding: 0 10px;
   overflow: hidden;
 }
-
-.form-text{
+.form-text-normal{
   display: block;
   width: 100%;
+  overflow: hidden;
   box-sizing: border-box;
   margin: 16px 0;
   border: 0;
   background:	RGB(149 ,167 ,182);
-  padding: 20px 40px;
+  padding: 20px 20px 0px 0px;
   outline: none;
+  color:#ddd ;
+  transition: 0.5s;
+}
+.form-text{
+  display: block;
+  align-items: center;
+  /* width: 100%; */
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 16px 0;
+  margin-right: auto;
+  background:	RGB(149 ,167 ,182);
+  /* padding: 20px 20px 0px 0px; */
   color:#ddd ;
   transition: 0.5s;
 }
@@ -45,9 +58,17 @@
   box-shadow:0 0 10px 4px RGB(150,112,137) ;
 }
 
-textarea.form-text{
+.label-forms{
+  padding: 10px;
+}
+
+
+textarea.form-text-normal{
   resize: none;
   height: 120px;
+  padding: 50px 65px;
+  border-radius: 5px;
+ 
 }
 
 .form-btn{
@@ -61,4 +82,62 @@ textarea.form-text{
 }
 .form-btn:hover{
   background-color:RGB(176,136,145) ;
+}
+
+.numberInputs {
+  max-width: 400px;
+  margin: auto; 
+  height:75px;
+  display: flex;
+  align-items: center;
+  /* align-content: center; */
+  /* justify-content: center; */
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+
+  textarea.form-text-normal{
+    resize: none;
+    height: 120px;
+    padding: 50px 65px;
+    border-radius: 5px;
+   
+  }
+  .form-btn{
+    float: right;
+    border: 0;
+    background-color: #ddd;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .form-text-normal{
+    display: block;
+    /* width: 100%; */
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background:	RGB(149 ,167 ,182);
+    padding: 20px 20px 0px 0px;
+    outline: none;
+    color:#ddd ;
+    transition: 0.5s;
+  }
+  .form-text{
+    display: block;
+    align-items: center;
+    /* width: 100%; */
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 16px 0;
+    margin-right: auto;
+    background:	RGB(149 ,167 ,182);
+    /* padding: 20px 20px 0px 0px; */
+    color:#ddd ;
+    transition: 0.5s;
+  }
 }

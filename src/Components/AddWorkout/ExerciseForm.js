@@ -4,8 +4,10 @@ import Context from '../../Contexts/Context';
 import FitpadApiService from '../../Services/fitpad-api-service';
 import MusclesDropDown from '../DropDowns/MusclesDropDown'
 import ExerciseDropDown from '../DropDowns/ExerciseDropDown'
+import Sets from './Sets'
 
 import '../../Styles/ExerciseForm.css';
+import DropDown from '../DropDowns/DropDown';
 
 export class ExerciseForm extends Component {
   static defaultProps = {
@@ -42,7 +44,7 @@ export class ExerciseForm extends Component {
     this.props.onAddWorkout();
   }
 
- 
+
   render() {
     return (
       <div className="exercise-form">
@@ -51,25 +53,29 @@ export class ExerciseForm extends Component {
 
         <div className="border"> </div>
             <MusclesDropDown />
-            <ExerciseDropDown />
+            {/* <ExerciseDropDown /> */}
+            <Sets />
+            {/* <DropDown /> */}
+            
+            {/* <label className=" exercise_name"> Exercise: </label>
+              <Input className="form-text-normal" name="exercise_name" type="text" placeholder="Enter Exercise Name" /> */}
 
-            <label className=" exercise_name"> Exercise: </label>
-              <Input className="form-text" name="exercise_name" type="text" placeholder="Enter Exercise Name" />
+            {/* <div className="numberInputs">
+              <label className="label-forms"> Sets: </label>
+                <Input className="form-text" name="workout_set" type="number" min="1" placeholder="Set"/>
 
-            <label className="sets"> Sets: </label>
-              <Input className="form-text" name="workout_set" type="number" min="1" placeholder="Set"/>
+              <label className="label-forms"> Reps: </label>
+                <Input className="form-text" name="workout_rep" type="number" min="1" placeholder="Reps"/>
 
-            <label className="reps"> Reps: </label>
-              <Input className="form-text" name="workout_rep" type="number" min="1" placeholder="Reps"/>
-
-            <label className="weight"> Weight: </label>
-              <Input className="form-text" name="workout_weight" type="number" min="1"placeholder="Weight" />
-
+              <label className="label-forms"> Weight: </label>
+                <Input className="form-text" name="workout_weight" type="number" min="1"placeholder="Weight" />
+            </div>
+                        */}
             <label className="notes"> Notes: </label>
-              <Textarea className="form-text" name="notes" id="workoutNotes"/>
-            <Button className="form-btn" type="submit"> Log Workout </Button>
-         
+                <Textarea className="form-text-normal" name="notes" id="workoutNotes"/> 
 
+            <Button className="form-btn" type="submit"> Log Workout </Button>
+  
         </form>
       </div>
     )

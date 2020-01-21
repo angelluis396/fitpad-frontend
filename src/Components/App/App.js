@@ -57,17 +57,18 @@ export class App extends Component {
             <PublicOnlyRoute path={'/Register'}
               component={RegisterPage}
             />
+
             {/* <PublicOnlyRoute exact path={'/Add'}
               component={AddWorkoutPage}
             />
 
-            <PublicOnlyRoute exact path={'/Home'}
+             <PublicOnlyRoute exact path={'/Home'}
               component={UserHomepage}
             /> */}
 
             <PrivateRoute exact path={'/Add'}
               component={AddWorkoutPage}
-            />
+            /> */}
 
             <PrivateRoute exact path={'/Home'}
               component={UserHomepage}
@@ -77,6 +78,7 @@ export class App extends Component {
               component={NoPageFound}
             />
           </Switch>
+          
         </main>
       </div>
     </Context.Provider>

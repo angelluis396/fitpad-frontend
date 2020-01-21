@@ -5,41 +5,45 @@ export default class ExerciseDropDown extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      exercises: {},
-      exercise: ""
+      exercises: []
     }
-    this.handleSubmit.bind(this)
   }
 
 
-  handleSubmit(event) {}
-  
+ 
   handleChange = event => {
     this.setState({exercise: event.target.value})
   }
 
+
+
   componentDidMount() {
     const exercises = require("./exercises.json");
-    this.setState({ exercises:exercises });
+    this.setState({ exercises: exercises.exercises });
   }
 
   render() {
-    // const exercises = require('./exercises.json');
-    const exercises = this.state.exercises;
-    const exercise = this.state.exercise;
+
+    const exercises = require("./exercises.json");
+    
     return (
-      <form>
+      <div>
         <label> Pick an Exercise
-          <select>
-            {Object.keys(exercises).map(item => (
-              <option key={item.id} value={item.exercise}> {item.exercise} </option>
+          <select onChange={this.state.handleChange}>
+            {exercises && Object.keys(this.state.exercises).map(item => (
+              <option key={item.id} value={item.exercises}>
+                {item.exercises} 
+              </option>
             ))}
-            {console.log(this.state.exercises)}
-            {console.log(this.state.exercises.data[0])}
+
+
+            
+             {console.log(this.state.exercises)}
+             
           </select>
 
         </label>
-      </form>
+      </div>
     )
   }
 }

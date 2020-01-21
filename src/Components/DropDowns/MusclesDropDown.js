@@ -1,78 +1,43 @@
 import React, { Component } from 'react'
-const muscles = require('./muscles.json');
 
-export default class MusclesDropDown extends Component {
+export default class BodyPartDropDown extends Component {
   constructor(props) {
     super(props)
     this.state = {
        muscles: [],
-       muscle: ""
     }
     this.handleSubmit.bind(this)
   }
-
-
+ 
   handleSubmit(event) {}
   
   handleChange = event => {
     this.setState({muscle: event.target.value})
   }
 
-  getUnique(arr, comp) {
-    const unique = arr
-      .map(e => e[comp])
-      .map((e, i , final) => final.indexOf(e) === i && i)
-      .filter(e => arr[e]);
-    return unique;
-  }
-  
-  componentDidMount() {
-    const muscles = require("./muscles.json");
-    this.setState({ muscles:muscles });
-  }
 
   render() {
-    
-    // const muscles = require('./muscles.json');
-    const uniqueMuscle = this.getUnique(this.state.muscles, "tag")
-    const muscles = this.state.muscles;
-    const muscle = this.state.muscle;
-    // const filterDropDown = muscles.filter(function(result) {
-    //   return result.tag === muscle;
-    // });
+    const muscles = require("./muscles.json");
+    const exercises = require("./exercises.json");
+
+
 
     return (
-      
-      <form>
+      <div>
         <label> Select a Muscle 
-          <select 
-            value={this.state.muscle} 
-            onChange={this.handleChange}
-          >
-            {this.state.muscles.map(muscle => (
-              <option key={muscle.id} value={muscle.tag}>
-                {muscle.tag}
+          <select name="exercise_name" onChange={this.state.handleChange}>
+            {muscles.map(item => (
+              <option name="exercise_name" key={item.id} value={item.muscle}>
+                {item.muscle}
               </option>
             ))}
 
-            {/* {uniqueMuscle.map(muscle => (
-              <option key={muscle.id} value={muscle.tag}>
-                {muscle.tag}
-              </option>
-            ))} */}
-
           </select>
+          {console.log(this.state.muscle)}
         </label>
-        <input type="submit" value="Submit" />
-        <div> 
-          {/* {filterDropDown.map(muscle => (
-            <div key={muscle.id} style={{margin:"10px"}}>
-              {muscle.muscle}
-              <br />
-            </div>
-          ))} */}
-        </div>
-      </form>
+      </div>
+
+  
     )
   }
-}
+} 

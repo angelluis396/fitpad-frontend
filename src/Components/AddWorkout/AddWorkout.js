@@ -15,6 +15,7 @@ export class AddWorkout extends Component {
       // </div>
         <div>
           <ExerciseForm />
+          
         </div>
     )
   }
