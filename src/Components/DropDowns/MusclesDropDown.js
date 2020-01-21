@@ -23,9 +23,9 @@ export default class BodyPartDropDown extends Component {
 
 
     return (
-      <div>
-        <label> Select a Muscle 
-          <select name="exercise_name" onChange={this.state.handleChange}>
+      <div className="dropDown">
+        <label> Select a Muscle </label>
+          <select className="muscleSelect" onChange={this.state.handleChange}>
             {muscles.map(item => (
               <option name="exercise_name" key={item.id} value={item.muscle}>
                 {item.muscle}
@@ -34,7 +34,7 @@ export default class BodyPartDropDown extends Component {
 
           </select>
           {console.log(this.state.muscle)}
-        </label>
+        
       </div>
 
   

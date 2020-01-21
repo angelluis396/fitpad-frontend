@@ -10,10 +10,22 @@ import '../../Styles/ExerciseForm.css';
 import DropDown from '../DropDowns/DropDown';
 
 export class ExerciseForm extends Component {
+  state={
+    selectedMuscle: "",
+    selectedExercise: ""
+  }
   static defaultProps = {
     onAddWorkout: () =>{}
   };
   static contextType = Context;
+
+  handleSelectedMuscle = event =>{
+    this.setState({selectedMuscle: event.target.value})
+  }
+
+  handleSelectedExercise = event => {
+    this.setState({selectedExercise: event.target.value})
+  }
 
   handleSubmit = e => {
     e.preventDefault();
@@ -53,7 +65,7 @@ export class ExerciseForm extends Component {
 
         <div className="border"> </div>
             <MusclesDropDown />
-            {/* <ExerciseDropDown /> */}
+            <ExerciseDropDown />
             <Sets />
             {/* <DropDown /> */}
             

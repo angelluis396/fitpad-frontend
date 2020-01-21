@@ -32,7 +32,7 @@ export default class Sets extends Component {
     
     return (
       <div>
-          <button onClick={this.addSet}> Add new Set </button>
+          <button className="set-form-btn" onClick={this.addSet}> Add new Set </button>
           {
             sets.map((val, idx) => {
               let setId = `setId-${idx}`, weightId = `weightId-${idx}`, repsId = `reps-${idx} `
@@ -41,7 +41,7 @@ export default class Sets extends Component {
                   <Input
                     type="number"
                     setNumber={setId}
-                    className="setNumber"
+                    className="input-num"
                     // value={sets[idx].setNumber}
                     placeholder="set"
                     name="workout_set"
@@ -50,7 +50,7 @@ export default class Sets extends Component {
                   <Input
                     type="number"
                     reps={repsId}
-                    className="reps"
+                    className="input-num"
                     // value={sets[idx].reps}
                     placeholder="reps"
                     name="workout_rep"
@@ -59,14 +59,15 @@ export default class Sets extends Component {
                   <Input
                     type="number"
                     weight={weightId}
-                    className="weight"
+                    className="input-num"
                     // value={sets[idx].weight}
                     placeholder="weight"
                     name="workout_weight"
                     min="1"
                   />
-                  <button> Log Set...</button>
-                  <button onClick={()=> this.handleRemoveSet(idx)}> Delete Set...</button>
+                  
+                  <button className="log-set-form-btn" onClick={()=> this.handleRemoveSet(idx)}> Delete Set</button>
+                  <button className="log-set-form-btn"> Log Set</button>
                 </div>
               )
 

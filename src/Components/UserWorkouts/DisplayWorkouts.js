@@ -28,11 +28,11 @@ export default class DisplayWorkouts extends Component {
     
     const myWorkouts = this.state.myWorkouts.map((myWorkout, idx)=> (
       <div className="userWorkouts" key={idx}>
-        <ul className="exerciseName">{myWorkout.exercise_name} 
-          <li className="set">{myWorkout.workout_set} </li>
-          <li className="rep">{myWorkout.workout_rep} </li>
-          <li className="weight">{myWorkout.workout_weight} </li>
-          <li className="notes">{myWorkout.notes} </li>
+        <ul className="exerciseName">Name: {myWorkout.exercise_name}<br />
+          <li className="set">Set: {myWorkout.workout_set} </li><br />
+          <li className="rep">Reps: {myWorkout.workout_rep} </li><br />
+          <li className="weight">Weight: {myWorkout.workout_weight} </li><br />
+          <li className="notes">Notes: {myWorkout.notes} </li>
         </ul> 
       </div>
     ))

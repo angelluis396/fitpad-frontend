@@ -10,7 +10,6 @@ export default class UserHomepage extends Component {
       <div className="displayWorkouts">
         <h1> My Fitpad </h1>
         <Link to="/Add" className="link"> Add a workout </Link>
-        <ExerciseDropDown />
         <div className="myLoggedWorkouts">
           <DisplayWorkouts />
         </div>
