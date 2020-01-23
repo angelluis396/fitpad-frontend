@@ -5,6 +5,7 @@ export default class BodyPartDropDown extends Component {
     super(props)
     this.state = {
        muscles: [],
+       selectedMuscle: []
     }
     this.handleSubmit.bind(this)
   }
@@ -12,9 +13,13 @@ export default class BodyPartDropDown extends Component {
   handleSubmit(event) {}
   
   handleChange = event => {
-    this.setState({muscle: event.target.value})
+    this.setState({
+      muscle: event.target.value,
+      selectedMuscle: this.state.muscle
+    })
+    
   }
-
+  
 
   render() {
     const muscles = require("./muscles.json");
@@ -23,21 +28,21 @@ export default class BodyPartDropDown extends Component {
 
 
     return (
-      <div className="dropDown">
-        <label> Select a Muscle </label>
+       <div className="container">
           <select className="muscleSelect" onChange={this.state.handleChange}>
+          <option value="" disabled selected> Select A Muscle </option>
             {muscles.map(item => (
+              
               <option name="exercise_name" key={item.id} value={item.muscle}>
                 {item.muscle}
               </option>
+              
             ))}
 
           </select>
-          {console.log(this.state.muscle)}
-        
-      </div>
-
-  
+      </div>    
     )
   }
 } 
+
+{/* {console.log(this.state.muscle, "hi")} */}

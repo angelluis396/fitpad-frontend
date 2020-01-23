@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 *{
   margin: 0;
   padding: 0;
@@ -62,39 +64,78 @@
   padding: 10px;
 }
 
-.input-num{
-  border: 2px solid #aaaaaa;
-  border-radius: 5px;
+/* Sets form */
+
+.setsBox .input-num {
+  padding: 10px;
+  border-radius: 2px solid grey;
+  margin-right: 10px;
 }
 
-
-textarea.form-text-normal{
-  resize: none;
-  height: 120px;
-  padding: 50px 65px;
-  border-radius: 5px;
+.setsBox {
+  width: 100%;
+  padding-top: 10px;
  
 }
 
-.muscleSelect {
-  width: 250px;
-  height: 50px;
-  border: none;
-  border-radius: 3px;
-  font-size: 20px;
-  box-shadow:  0 5px 25px rgba(0,0,0,.5);
-  -webkit-appearance: button;
-  outline: none;
+.setsInput {
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+Textarea.form-text-normal{
+  resize: none;
+  height: 120px;
+  border-radius: 5px;
 }
 
-.dropDown {
+
+/* Select Box Styles */
+
+.muscleSelect {
+  width: 100%;
+  /* height: 50px; */
+  border: 1px solid grey;
+  padding: .8rem 3rem .8rem .5rem;
+  border-radius: 3px;
+  font-size: 16px;
+  box-shadow:  0 5px 25px rgba(0,0,0,.5);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+      appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.container:after {
+  content: 'keyboard_arrow_down';
+  font-family: 'material icons';
+  font-size: 35px;
+  position: absolute;
+  transform: translate(-50%);
+  pointer-events: none;
+  right: 10px;
+  top: 25%;
+}
+.container{
+  padding: 10px;
+  border: 2 px solid grey;
+  position: relative;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  /* align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 10px;
   padding-left: 10px ;
-  align-items: center;
+  align-items: center; */
 }
 
+
+/* Form Buttons */
 .set-form-btn {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -127,27 +168,13 @@ textarea.form-text-normal{
   background-color:RGB(176,136,145) ;
 }
 
-.numberInputs {
-  max-width: 400px;
-  margin: auto; 
-  height:75px;
-  display: flex;
-  align-items: center;
-  /* align-content: center; */
-  /* justify-content: center; */
-}
+
 
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) { 
 
-  textarea.form-text-normal{
-    resize: none;
-    height: 120px;
-    padding: 50px 65px;
-    border-radius: 5px;
-   
-  }
+ 
   .form-btn{
     float: right;
     border: 0;
@@ -157,19 +184,7 @@ and (max-device-width : 568px) {
     cursor: pointer;
     transition: 0.5s;
   }
-  .form-text-normal{
-    display: block;
-    /* width: 100%; */
-    overflow: hidden;
-    box-sizing: border-box;
-    margin: 16px 0;
-    border: 0;
-    background:	RGB(149 ,167 ,182);
-    padding: 20px 20px 0px 0px;
-    outline: none;
-    color:#ddd ;
-    transition: 0.5s;
-  }
+ 
   .form-text{
     display: block;
     align-items: center;
@@ -183,4 +198,43 @@ and (max-device-width : 568px) {
     color:#ddd ;
     transition: 0.5s;
   }
+  .setsInput {
+    position: abaolute;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2 px solid grey;
+    position: relative;
+    justify-content: space-between;
+  }
+  .setsInput .input-num {
+    width: 80%;
+    margin: 0;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+ 
+  Textarea.form-text-normal {
+    height: 75px;
+    padding: 0px;
+    
+    height: 150px;
+    border-radius: 3px;
+    margin: 0;
+    margin-top: 0;
+  }
+  .logSetBtn {
+    text-align: center;
+    padding-top: 10px;
+  }
+  .set-form-btn{
+    padding-top: 10px;
+    font-size: 15px;
+    width: 80%;
+    border-radius: 5px;
+  }
+  
 }

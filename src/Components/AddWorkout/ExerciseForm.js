@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Input, Textarea } from '../Utils/Utils';
+import { Button } from '../Utils/Utils';
 import Context from '../../Contexts/Context';
 import FitpadApiService from '../../Services/fitpad-api-service';
 import MusclesDropDown from '../DropDowns/MusclesDropDown'
@@ -64,30 +64,17 @@ export class ExerciseForm extends Component {
         <form className="addExercise-form" onSubmit={this.handleSubmit}>
 
         <div className="border"> </div>
-            <MusclesDropDown />
-            <ExerciseDropDown />
-            <Sets />
-            {/* <DropDown /> */}
-            
-            {/* <label className=" exercise_name"> Exercise: </label>
-              <Input className="form-text-normal" name="exercise_name" type="text" placeholder="Enter Exercise Name" /> */}
 
-            {/* <div className="numberInputs">
-              <label className="label-forms"> Sets: </label>
-                <Input className="form-text" name="workout_set" type="number" min="1" placeholder="Set"/>
-
-              <label className="label-forms"> Reps: </label>
-                <Input className="form-text" name="workout_rep" type="number" min="1" placeholder="Reps"/>
-
-              <label className="label-forms"> Weight: </label>
-                <Input className="form-text" name="workout_weight" type="number" min="1"placeholder="Weight" />
+            <div className="dropDown">
+              <MusclesDropDown />
+              <ExerciseDropDown />
             </div>
-                        */}
-            <label className="notes"> Notes: </label>
-                <Textarea className="form-text-normal" name="notes" id="workoutNotes"/> 
-
-            <Button className="form-btn" type="submit"> Log Workout </Button>
-  
+           
+            <Sets /> <br/>
+             
+            <div className="logWorkout"> 
+             <Button className="form-btn" type="submit"> Log Workout </Button>
+            </div>
         </form>
       </div>
     )

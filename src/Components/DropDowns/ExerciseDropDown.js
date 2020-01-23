@@ -26,19 +26,20 @@ export default class ExerciseDropDown extends Component {
    const {exercises} = this.state 
     
     return (
-      <div className="dropDown">
-        <label> Pick an Exercise </label>
+      <div className="container">
           <select className="muscleSelect" name="exercise_name" onChange={this.state.handleChange}>
+            <option value="" disabled selected> Select An Exercise </option>
             {exercises && Object.keys(exercises).map(item => {
-              console.log(exercises[item])
+              
               return exercises[item].map((exercise, idx) => {
                 return <option key={idx} value={exercise}> {exercise} </option>
               })
-            })}             
-          </select>
+            })}        
             
-        
-      </div>
+          </select>
+      </div>   
+      
     )
   }
 }
+{/* {console.log(this.state.exercises.key) 41} */}

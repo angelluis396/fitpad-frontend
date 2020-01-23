@@ -22,8 +22,8 @@
       "Standing Biceps Curl" 
     ],
     "triceps": [
-       "Barbell Triceps Extension (Behind the neck)",
-       "Lying Barbell Triceps Extension (skull crusher)",
+       "Barbell Triceps Extension",
+       "Lying Barbell Triceps Extension",
        "Close Grip Bench Press",
        "One arm Triceps Extension",
        "Triceps Kickback",
@@ -87,7 +87,7 @@
        "Kickbacks",
        "Romanian Deadlifts",
        "Hip Thrust",
-       "Band-Resisted Hip Abduction Squats"
+       "Hip Abduction Squats"
     ],
     "calfs": [
        "Barbell Calf raises",
