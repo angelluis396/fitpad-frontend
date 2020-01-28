@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import {Input, Textarea} from '../Utils/Utils'
+import {Input} from '../Utils/Utils'
 
 export default class Sets extends Component {
   state= {
-    sets: [{setnumber: "", weight: "", reps: "", notes: ""}]
+    sets: [{setnumber: "", weight: "", reps: ""}]
   }
 
   handleChange = (e) => {
-    if(["setnumber", "weight", "reps", "notes"].includes(e.target.className)) {
+    if(["setnumber", "weight", "reps"].includes(e.target.className)) {
       let sets = [...this.state.sets]
       sets[e.target.dataset.id] [e.target.className] = e.target.value
       this.setState({sets}, () => console.log(this.state.sets))
@@ -19,7 +19,7 @@ export default class Sets extends Component {
   addSet = (e) => {
     e.preventDefault()
     this.setState((prevState) => ({
-      sets: [...prevState.sets, {setnumber: "",  weight: "", reps: "", notes: "" }],
+      sets: [...prevState.sets, {setnumber: "",  weight: "", reps: "" }],
     }));
   }
 
@@ -38,7 +38,7 @@ export default class Sets extends Component {
           
           {
             sets.map((val, idx) => {
-              let setId = `setId-${idx}`, weightId = `weightId-${idx}`, repsId = `reps-${idx}`, notesId=`notes-${idx}`
+              let setId = `setId-${idx}`, weightId = `weightId-${idx}`, repsId = `reps-${idx}`
               return (
                 <div className="setsBox" key={idx}>
                   <div className="setsInput">
@@ -62,6 +62,7 @@ export default class Sets extends Component {
                       name="workout_rep"
                       min="1"
                     />
+                    
                     <Input
                       type="number"
                       weight={weightId}
@@ -72,14 +73,7 @@ export default class Sets extends Component {
                       min="1"
                     />
                   </div>
-                  <Textarea
-                    placeholder="Notes..."
-                    notes={notesId}
-                    className="form-text-normal" 
-                    name="notes" 
-                    id="workoutNotes"
-                  />
-                  
+                 
                     <button className="log-set-form-btn" onClick={()=> this.handleRemoveSet(idx)}> Delete Set</button>
                     <button className="log-set-form-btn"> Log Set</button>
                   

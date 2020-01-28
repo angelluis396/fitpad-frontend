@@ -5,20 +5,23 @@ export default class ExerciseDropDown extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      exercises: []
+      exercises: [],
+      selectedExercise: []
     }
   }
 
 
- 
   handleChange = event => {
-    this.setState({exercise: event.target.value})
+    this.setState({
+      exercise: event.target.value,
+      selectedExercise: this.props.exercise
+    })
   }
 
 
 
+
   componentDidMount() {
-    
     this.setState({ exercises: exercises.exercises });
   }
 
@@ -27,10 +30,16 @@ export default class ExerciseDropDown extends Component {
     
     return (
       <div className="container">
-          <select className="muscleSelect" name="exercise_name" onChange={this.state.handleChange}>
-            <option value="" disabled selected> Select An Exercise </option>
-            {exercises && Object.keys(exercises).map(item => {
-              
+          <select 
+            className="muscleSelect" 
+            name="exercise_name" 
+            onChange={this.state.handleChange}
+          >
+            <option 
+              value="" disabled selected> 
+              Select An Exercise 
+            </option>
+              {exercises && Object.keys(exercises).map(item => {      
               return exercises[item].map((exercise, idx) => {
                 return <option key={idx} value={exercise}> {exercise} </option>
               })
@@ -42,4 +51,4 @@ export default class ExerciseDropDown extends Component {
     )
   }
 }
-{/* {console.log(this.state.exercises.key) 41} */}
+

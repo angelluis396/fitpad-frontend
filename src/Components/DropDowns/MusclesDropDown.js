@@ -5,7 +5,7 @@ export default class BodyPartDropDown extends Component {
     super(props)
     this.state = {
        muscles: [],
-       selectedMuscle: []
+       selectedMuscle: ""
     }
     this.handleSubmit.bind(this)
   }
@@ -15,11 +15,9 @@ export default class BodyPartDropDown extends Component {
   handleChange = event => {
     this.setState({
       muscle: event.target.value,
-      selectedMuscle: this.state.muscle
+      selectedMuscle: this.props.muscle
     })
-    
   }
-  
 
   render() {
     const muscles = require("./muscles.json");

@@ -1,23 +1,26 @@
 import React, { Component } from 'react'
-import { Button } from '../Utils/Utils';
+import { Button, Textarea } from '../Utils/Utils';
 import Context from '../../Contexts/Context';
 import FitpadApiService from '../../Services/fitpad-api-service';
 import MusclesDropDown from '../DropDowns/MusclesDropDown'
 import ExerciseDropDown from '../DropDowns/ExerciseDropDown'
 import Sets from './Sets'
-
 import '../../Styles/ExerciseForm.css';
 import DropDown from '../DropDowns/DropDown';
+import Exercises from '../DropDowns/exercises.json'
 
 export class ExerciseForm extends Component {
   state={
     selectedMuscle: "",
-    selectedExercise: ""
+    selectedExercise: "",
+    exercises: {}
   }
   static defaultProps = {
     onAddWorkout: () =>{}
   };
   static contextType = Context;
+
+
 
   handleSelectedMuscle = event =>{
     this.setState({selectedMuscle: event.target.value})
@@ -66,12 +69,23 @@ export class ExerciseForm extends Component {
         <div className="border"> </div>
 
             <div className="dropDown">
-              <MusclesDropDown />
-              <ExerciseDropDown />
+              <MusclesDropDown 
+                onSelect={this.handleSelectedMuscle}
+              />
+              <ExerciseDropDown 
+                onSelect={this.handleSelectedExercise}
+              />
             </div>
            
-            <Sets /> <br/>
-             
+            <Sets/> <br/>
+
+            <Textarea
+              placeholder="Notes..."
+              className="form-text-normal" 
+              name="notes" 
+              id="workoutNotes"
+            />
+                  
             <div className="logWorkout"> 
              <Button className="form-btn" type="submit"> Log Workout </Button>
             </div>
