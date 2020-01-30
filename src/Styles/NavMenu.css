@@ -1,6 +1,11 @@
 nav {
-  background-color:rgba(150, 168, 188) ;
+  /* background: inherit; */
+  /* background: #aa4b6b;
+  background: -webkit-linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+  background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+  background-size: cover; ; */
 }
+
 .navBar {
   display: inline-block;
   justify-content: space-between;
@@ -10,7 +15,8 @@ nav {
   right:0;
   z-index: 10;
   padding: 5px;
-}
+  background: inherit;
+}s
 
 .navContents {
   display: inline-block;
@@ -21,7 +27,6 @@ nav {
   right:0;
   z-index: 10;
   /* padding: 5px; */
-  background-color:rgba(150, 168, 188)
 }
 
 .fullname {

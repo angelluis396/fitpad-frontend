@@ -2,48 +2,28 @@ import React, { Component } from 'react'
 const exercises = require('./exercises.json');
 
 export default class ExerciseDropDown extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      exercises: [],
-      selectedExercise: []
-    }
-  }
-
-
+ 
   handleChange = event => {
-    this.setState({
-      exercise: event.target.value,
-      selectedExercise: this.props.exercise
-    })
-  }
-
-
-
-
-  componentDidMount() {
-    this.setState({ exercises: exercises.exercises });
+    this.props.onSelect(event);
   }
 
   render() {
-   const {exercises} = this.state 
-    
+   const allExercises = this.props.allExercises 
+  
     return (
       <div className="container">
           <select 
             className="muscleSelect" 
             name="exercise_name" 
-            onChange={this.state.handleChange}
+            onChange={this.handleChange}
           >
             <option 
               value="" disabled selected> 
               Select An Exercise 
             </option>
-              {exercises && Object.keys(exercises).map(item => {      
-              return exercises[item].map((exercise, idx) => {
+              {allExercises.map((exercise, idx) => {      
                 return <option key={idx} value={exercise}> {exercise} </option>
-              })
-            })}        
+              })}        
             
           </select>
       </div>   

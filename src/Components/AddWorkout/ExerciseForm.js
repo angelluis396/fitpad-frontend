@@ -6,21 +6,19 @@ import MusclesDropDown from '../DropDowns/MusclesDropDown'
 import ExerciseDropDown from '../DropDowns/ExerciseDropDown'
 import Sets from './Sets'
 import '../../Styles/ExerciseForm.css';
-import DropDown from '../DropDowns/DropDown';
-import Exercises from '../DropDowns/exercises.json'
-
+// import exercises from '../DropDowns/exercises.json'
+import muscles from '../DropDowns/muscles.json'
+const exercises = require('../DropDowns/exercises.json')
+ 
 export class ExerciseForm extends Component {
   state={
     selectedMuscle: "",
     selectedExercise: "",
-    exercises: {}
   }
   static defaultProps = {
     onAddWorkout: () =>{}
   };
   static contextType = Context;
-
-
 
   handleSelectedMuscle = event =>{
     this.setState({selectedMuscle: event.target.value})
@@ -61,6 +59,8 @@ export class ExerciseForm extends Component {
 
 
   render() {
+    const exerciseOptions = this.state.selectedMuscle === "" ? [] : exercises[this.state.selectedMuscle]
+
     return (
       <div className="exercise-form">
         <h1> Add A Workout </h1>
@@ -71,12 +71,14 @@ export class ExerciseForm extends Component {
             <div className="dropDown">
               <MusclesDropDown 
                 onSelect={this.handleSelectedMuscle}
+                allMuscles={Object.keys(exercises.exercises)}
               />
               <ExerciseDropDown 
                 onSelect={this.handleSelectedExercise}
+                allExercises={exerciseOptions}
               />
             </div>
-           
+           {console.log(exercises.exercises)}
             <Sets/> <br/>
 
             <Textarea
