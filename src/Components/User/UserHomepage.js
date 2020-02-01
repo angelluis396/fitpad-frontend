@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import AddWorkoutPage from '../../Routes/AddWorkoutPage'
 import { Link } from 'react-router-dom';
-import DisplayWorkouts from '../UserWorkouts/DisplayWorkouts';
+import DisplayWorkouts from '../DisplayWorkouts/DisplayWorkouts';
 import '../../Styles/UserHome.css';
-import ExerciseDropDown from '../DropDowns/ExerciseDropDown'
+
 export default class UserHomepage extends Component {
   render() {
     return (

@@ -6,7 +6,6 @@ import MusclesDropDown from '../DropDowns/MusclesDropDown'
 import ExerciseDropDown from '../DropDowns/ExerciseDropDown'
 import Sets from './Sets'
 import '../../Styles/ExerciseForm.css';
-// import exercises from '../DropDowns/exercises.json'
 import muscles from '../DropDowns/muscles.json'
 const exercises = require('../DropDowns/exercises.json')
  
@@ -36,7 +35,7 @@ export class ExerciseForm extends Component {
       workout_set, 
       workout_rep, 
       workout_weight,
-      notes,
+      notes
     } = e.target
     
     FitpadApiService.postWorkout(
@@ -59,7 +58,7 @@ export class ExerciseForm extends Component {
 
 
   render() {
-    const exerciseOptions = this.state.selectedMuscle === "" ? [] : exercises[this.state.selectedMuscle]
+    const exerciseOptions = this.state.selectedMuscle === "" ? [] : exercises.exercises[this.state.selectedMuscle]
 
     return (
       <div className="exercise-form">
@@ -78,18 +77,22 @@ export class ExerciseForm extends Component {
                 allExercises={exerciseOptions}
               />
             </div>
-           {console.log(exercises.exercises)}
-            <Sets/> <br/>
-
-            <Textarea
-              placeholder="Notes..."
-              className="form-text-normal" 
-              name="notes" 
-              id="workoutNotes"
-            />
+            <div className="setsBox">
+              <Sets/> <br/>
+            </div>
+            
+            <div className="textArea">
+              <Textarea
+                placeholder="Notes..."
+                className="form-text-normal" 
+                name="notes" 
+                id="workoutNotes"
+              />
+            </div>
+            
                   
             <div className="logWorkout"> 
-             <Button className="form-btn" type="submit"> Log Workout </Button>
+             <Button className="form-btn" type="submit"> Log Exercise </Button>
             </div>
         </form>
       </div>

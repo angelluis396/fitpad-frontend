@@ -30,19 +30,7 @@
   padding: 0 10px;
   overflow: hidden;
 }
-.form-text-normal{
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
-  margin: 16px 0;
-  border: 0;
-  background:	RGB(149 ,167 ,182);
-  padding: 20px 20px 0px 0px;
-  outline: none;
-  color:#ddd ;
-  transition: 0.5s;
-}
+
 .form-text{
   display: block;
   align-items: center;
@@ -67,27 +55,38 @@
 /* Sets form */
 
 .setsBox .input-num {
-  padding: 10px;
+  padding: .5rem 1rem .8rem .5rem;
   border-radius: 2px solid grey;
-  margin-right: 10px;
+  font-size: 16px;
+  width: auto;
+  margin-bottom: 10px;
 }
 
 .setsBox {
-  width: 100%;
-  padding-top: 10px;
- 
+  display: inline-block;
+  position: relative;
 }
 
 .setsInput {
+  padding: 10px;
+  border: 2 px solid grey;
+  position: relative;
+}
+
+/* Text Area Styles */
+.textArea {
   align-items: center;
-  width: 100%;
-  margin: 0 auto;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
   padding: 10px;
 }
-Textarea.form-text-normal{
-  resize: none;
-  height: 120px;
-  border-radius: 5px;
+
+.form-text-normal {
+  padding: 10px;
+  border-radius: 2px solid grey;
+  font-size: 20px;
+  width: auto;
 }
 
 
@@ -175,7 +174,7 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) { 
 
  
-  .form-btn{
+  .form-btn {
     float: right;
     border: 0;
     background-color: #ddd;
@@ -185,7 +184,7 @@ and (max-device-width : 568px) {
     transition: 0.5s;
   }
  
-  .form-text{
+  .form-text {
     display: block;
     align-items: center;
     /* width: 100%; */
@@ -198,34 +197,32 @@ and (max-device-width : 568px) {
     color:#ddd ;
     transition: 0.5s;
   }
+  .setsBox .input-num {
+    padding: .5rem 1rem .8rem .5rem;
+    border-radius: 2px solid grey;
+    font-size: 16px;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  
+  .setsBox {
+    display: inline-block;
+    position: relative;
+  }
+  
   .setsInput {
-    position: abaolute;
-    align-items: center;
-    width: 70%;
-    margin: 0 auto;
+    text-align: center;
     padding: 10px;
     border: 2 px solid grey;
     position: relative;
-    justify-content: space-between;
   }
-  .setsInput .input-num {
-    width: 80%;
-    margin: 0;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
- 
-  Textarea.form-text-normal {
+  /* Textarea.form-text-normal {
     height: 75px;
     padding: 0px;
-    
     height: 150px;
     border-radius: 3px;
-    margin: 0;
     margin-top: 0;
-  }
+  } */
   .logSetBtn {
     text-align: center;
     padding-top: 10px;

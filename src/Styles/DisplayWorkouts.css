@@ -1,5 +1,6 @@
 .userWorkouts > ul li {
   list-style-type: none;
+  color: aliceblue;
 }
 
 .userWorkouts {
