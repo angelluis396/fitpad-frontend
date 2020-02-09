@@ -23,9 +23,7 @@ export default class FullName extends Component {
   render() {
     return (
       <div className="fullName">
-        <Link to='/users/home' className="user">
-          <span className="fullname"> {this.state.full_name}'s Fitpad</span>
-        </Link>
+        <span className="fullname"> {this.state.full_name}'s Fitpad</span>
       </div>
     )
   }

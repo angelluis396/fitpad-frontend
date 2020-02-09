@@ -1,8 +1,46 @@
+h1 {
+  color: #fff;
+}
+
 .userWorkouts > ul li {
   list-style-type: none;
-  color: aliceblue;
+  color: #fff;
+}
+.dateCreated {
+  color: #fff;
+  margin-bottom: 5px;
 }
 
 .userWorkouts {
   border: solid grey;
+  justify-content: center;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
 }
+
+.linkToAdd {
+  text-align: center;
+  margin: 5px;
+  color: #fff;
+}
+
+.exercises-container {
+  border: solid violet;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.dateCreated {
+  border: yellow 2px;
+}
+
+.accordion-title {
+  width: 100%;
+  max-width: 600px;
+  cursor: pointer;
+}
+/* .accordion-content {
+  visibility: hidden;
+  
+} */

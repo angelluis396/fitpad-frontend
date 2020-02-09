@@ -10,7 +10,6 @@ export default class RegisterPage extends Component {
   }
   handleRegisterSuccess = user => {
     const {history} = this.props
-    console.log(history)
     history.push('/login')
   }
  

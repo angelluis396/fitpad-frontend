@@ -62,7 +62,7 @@ export class ExerciseForm extends Component {
 
     return (
       <div className="exercise-form">
-        <h1> Add A Workout </h1>
+        <h1> Add an Exercise </h1>
         <form className="addExercise-form" onSubmit={this.handleSubmit}>
 
         <div className="border"> </div>
@@ -78,9 +78,9 @@ export class ExerciseForm extends Component {
               />
             </div>
             <div className="setsBox">
-              <Sets/> <br/>
+              <Sets/>
             </div>
-            
+
             <div className="textArea">
               <Textarea
                 placeholder="Notes..."
@@ -89,11 +89,9 @@ export class ExerciseForm extends Component {
                 id="workoutNotes"
               />
             </div>
-            
-                  
             <div className="logWorkout"> 
              <Button className="form-btn" type="submit"> Log Exercise </Button>
-            </div>
+            </div>              
         </form>
       </div>
     )

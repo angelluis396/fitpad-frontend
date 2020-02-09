@@ -6,21 +6,15 @@
   font-family: 'montserrat', sans-serif;
 }
 
-/* .exercise-form{
-  background:url(../Photos/fitpadBackground.jpg) no-repeat center;
-  background-size: cover;
-  padding: 40px 0;
-} */
-
 .exercise-form h1{
   text-align: center;
-  color: black;
+  color: white;
 }
 
 .border{
   width: 100px;
   height: 10px;
-  background-color:RGB(150,112,137);
+  background-color:#3b8d99;
   margin: 40px auto;
 }
 
@@ -31,35 +25,19 @@
   overflow: hidden;
 }
 
-.form-text{
-  display: block;
-  align-items: center;
-  /* width: 100%; */
-  overflow: hidden;
-  box-sizing: border-box;
-  margin: 16px 0;
-  margin-right: auto;
-  background:	RGB(149 ,167 ,182);
-  /* padding: 20px 20px 0px 0px; */
-  color:#ddd ;
-  transition: 0.5s;
-}
-.form-text:focus{
-  box-shadow:0 0 10px 4px RGB(150,112,137) ;
-}
-
-.label-forms{
-  padding: 10px;
-}
 
 /* Sets form */
 
 .setsBox .input-num {
-  padding: .5rem 1rem .8rem .5rem;
-  border-radius: 2px solid grey;
+  border-radius: 3px;
+  padding-left: 5px;
   font-size: 16px;
-  width: auto;
-  margin-bottom: 10px;
+  width:30%;
+  height: 40px;
+  box-shadow:  0 5px 25px rgba(0,0,0,.5);
+  outline: none;
+  border: 0;
+  margin: 5px;
 }
 
 .setsBox {
@@ -68,25 +46,27 @@
 }
 
 .setsInput {
+  text-align: center;
   padding: 10px;
   border: 2 px solid grey;
-  position: relative;
 }
 
 /* Text Area Styles */
 .textArea {
-  align-items: center;
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
+  text-align: center;
+  width: auto;
   padding: 10px;
 }
 
 .form-text-normal {
   padding: 10px;
-  border-radius: 2px solid grey;
-  font-size: 20px;
-  width: auto;
+  border-radius: 3px;
+  font-size: 16px;
+  outline: none;
+  width: 80%;
+  box-shadow:  0 5px 25px rgba(0,0,0,.5);
+  border:0;
+  height: 20%;
 }
 
 
@@ -94,7 +74,6 @@
 
 .muscleSelect {
   width: 100%;
-  /* height: 50px; */
   border: 1px solid grey;
   padding: .8rem 3rem .8rem .5rem;
   border-radius: 3px;
@@ -116,7 +95,7 @@
   right: 10px;
   top: 25%;
 }
-.container{
+.container {
   padding: 10px;
   border: 2 px solid grey;
   position: relative;
@@ -125,43 +104,24 @@
 .dropdown {
   display: inline-block;
   position: relative;
-  /* align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 10px ;
-  align-items: center; */
 }
 
 
 /* Form Buttons */
-.set-form-btn {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 10px ;
-  border: 0;
-  background-color: #ddd;
-  border-radius: 15px;
+.logWorkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.log-set-form-btn {
-  float: right;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 10px ;
-  border: 0;
-  background-color: #ddd;
-  border-radius: 15px;
-}
-.form-btn{
+.form-btn {
   float: right;
   border: 0;
   background-color: #ddd;
   padding: 12px 50px;
-  border-radius: 20px;
+  border-radius: 15px;
   cursor: pointer;
   transition: 0.5s;
+  font-size: 16px;
 }
 .form-btn:hover{
   background-color:RGB(176,136,145) ;
@@ -173,17 +133,9 @@
 and (min-device-width : 320px) 
 and (max-device-width : 568px) { 
 
- 
-  .form-btn {
-    float: right;
-    border: 0;
-    background-color: #ddd;
-    padding: 12px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.5s;
+  .border {
+    margin: 10px auto;
   }
- 
   .form-text {
     display: block;
     align-items: center;
@@ -198,40 +150,38 @@ and (max-device-width : 568px) {
     transition: 0.5s;
   }
   .setsBox .input-num {
-    padding: .5rem 1rem .8rem .5rem;
+    padding: .1rem .5rem .3rem .5rem;
     border-radius: 2px solid grey;
     font-size: 16px;
     width: auto;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
-  
-  .setsBox {
-    display: inline-block;
-    position: relative;
-  }
-  
   .setsInput {
     text-align: center;
     padding: 10px;
     border: 2 px solid grey;
     position: relative;
   }
-  /* Textarea.form-text-normal {
-    height: 75px;
-    padding: 0px;
-    height: 150px;
-    border-radius: 3px;
-    margin-top: 0;
-  } */
-  .logSetBtn {
-    text-align: center;
-    padding-top: 10px;
+  .textArea {
+    position: relative;
   }
-  .set-form-btn{
-    padding-top: 10px;
-    font-size: 15px;
-    width: 80%;
-    border-radius: 5px;
+  .form-text-normal {
+    padding: 15px;
   }
-  
+  .logWorkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-btn {
+    border: 0;
+    font-size: 16px;
+    width: 50%;
+    background-color: #ddd;
+    padding: 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 5px;
+  }
 }

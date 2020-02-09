@@ -36,10 +36,7 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div className="root-container">
-        <h1> Welcome To FitPad </h1>
-        {/* <div className="border" /> */}
-          
-          
+        <h1> Welcome To FitPad </h1>   
           <div className="box-controller">
 
             <div className={"controller" + (this.state.isLoginOpen ? "selected-controller" : "")}
@@ -56,9 +53,7 @@ export default class LandingPage extends Component {
 
           <div className="box-container">
           {this.state.isLoginOpen && <Login onLoginSuccess={this.handleLoginSuccess} />}
-            {this.state.isRegisterOpen && <Register />}
-            
-            
+            {this.state.isRegisterOpen && <Register />}   
           </div>
 
         </div>

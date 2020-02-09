@@ -2,11 +2,6 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -15,11 +10,8 @@ code {
 }
 html, body, #root, .App, .App_main {
   height: 100%;
-  background: #aa4b6b;
-  background: -webkit-linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
-  background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+  background: #ed213a;
+  background: -webkit-linear-gradient(to right, #ed213a, #93291e); 
+  background: linear-gradient(to right, #ed213a, #93291e);
   background-size: cover;
 }
-/* *{
-  background: url('./Photos/fitpadBackground.jpg');
-} */
