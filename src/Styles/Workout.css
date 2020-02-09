@@ -9,7 +9,6 @@ Button {
 
 .Required {
   color: #CA1551;
-  font-family:'Montserrat', sans-serif;
   font-weight: bold;
 }
 
@@ -23,12 +22,7 @@ Button {
 }
 
 label {
-  font-family:'Montserrat', sans-serif;
   text-align: left;
-}
-
-h2 {
-  font-family: 'Pacifico', cursive;
 }
 
 .float-container {

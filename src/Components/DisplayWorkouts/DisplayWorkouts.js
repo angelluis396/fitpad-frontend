@@ -9,7 +9,7 @@ export default class DisplayWorkouts extends Component {
     this.state={
       myWorkouts: [],
       error:null,
-      isContentVisible: false
+      // toggledId: null
     }
   }
 
@@ -31,18 +31,24 @@ export default class DisplayWorkouts extends Component {
     
   }
   
-  toggleAccordion = () => {
-    this.setState ({
-      isContentVisible: !this.state.isContentVisible
-    })
+  toggleAccordion = (id) => {
+    if (this.state.toggledId === id) {
+      this.setState ({
+        toggledId: null
+      })
+    } else {
+      this.setState ({
+        toggledId: id
+      })
+    }
   }
   
   render() {
     const myWorkouts = this.state.myWorkouts.map((myWorkout, idx)=> (
       <div className="userWorkouts" key={idx}>
-        <button className="accordion-title" onClick={this.toggleAccordion}> {moment(myWorkout.date_created).format("MMMM Do YYYY")} </button>
+        <button className="accordion-title" onClick={this.toggleAccordion({id})}> {moment(myWorkout.date_created).format("MMMM Do YYYY")} </button>
 
-        { this.state.isContentVisible && 
+        { this.state.toggledId && 
         
           <ul 
             className="dateCreated">

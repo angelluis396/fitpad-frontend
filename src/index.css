@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap")
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
 body {
   margin: 0;
@@ -14,4 +14,8 @@ html, body, #root, .App, .App_main {
   background: -webkit-linear-gradient(to right, #ed213a, #93291e); 
   background: linear-gradient(to right, #ed213a, #93291e);
   background-size: cover;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Bebas Neue', cursive;
 }
