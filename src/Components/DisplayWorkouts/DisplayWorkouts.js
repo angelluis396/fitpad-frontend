@@ -10,6 +10,7 @@ export default class DisplayWorkouts extends Component {
       myWorkouts: [],
       error:null,
       // toggledId: null
+      id: myWorkouts.id
     }
   }
 
@@ -46,7 +47,7 @@ export default class DisplayWorkouts extends Component {
   render() {
     const myWorkouts = this.state.myWorkouts.map((myWorkout, idx)=> (
       <div className="userWorkouts" key={idx}>
-        <button className="accordion-title" onClick={this.toggleAccordion({id})}> {moment(myWorkout.date_created).format("MMMM Do YYYY")} </button>
+        <button className="accordion-title" onClick={()=> this.toggleAccordion(this.state.id)}> {moment(myWorkout.date_created).format("MMMM Do YYYY")} </button>
 
         { this.state.toggledId && 
         
