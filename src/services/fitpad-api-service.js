@@ -25,7 +25,7 @@ const FitpadApiService = {
       .then(e => Promise.reject(e)) : res.json()  
     );
   },
-  postWorkout(exercise_name, workout_set, workout_rep,workout_weight, user_id, notes) {
+  postWorkout(exercise_name, workout_set, workout_rep,workout_weight, notes) {
     return fetch(`${config.API_ENDPOINT}/fitpadData`, {
       method: 'POST',
       headers: {
@@ -37,8 +37,8 @@ const FitpadApiService = {
         workout_set, 
         workout_rep,
         workout_weight,
-        user_id, 
-        notes
+         
+        notes,
       })
     })
     .then( res => 

@@ -35,7 +35,7 @@ export class ExerciseForm extends Component {
       workout_set, 
       workout_rep, 
       workout_weight,
-      notes
+      notes,
     } = e.target
     
     FitpadApiService.postWorkout(

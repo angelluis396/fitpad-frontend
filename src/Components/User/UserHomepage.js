@@ -10,9 +10,9 @@ export default class UserHomepage extends Component {
       <div className="displayWorkouts">
         <h1> <FullName /> </h1>
         <div className="linkToAdd">
-          <Link to="/Add" className="link"> Add an Exercise </Link>
+          <Link to="/Add" className="link"> Add a New Exercise </Link>
         </div>
-        <h3> My Exercise's </h3>  
+        <h3> Logged Exercise's </h3>  
         <div className="myLoggedWorkouts">
           <DisplayWorkouts />
         </div>

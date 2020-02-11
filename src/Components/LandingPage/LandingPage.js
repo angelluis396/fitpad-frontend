@@ -4,14 +4,11 @@ import Register from '../LoginRegister/Register';
 import '../../Styles/LandingPage.css';
 
 export default class LandingPage extends Component {
-  // constructor(props) {
-  //   super(props)
-  
-    state = {
-       isLoginOpen: true,
-       isRegisterOpen: false
-    }
-  // }
+  state = {
+    isLoginOpen: true,
+    isRegisterOpen: false
+  }
+
 
   static defaultProps = {
     location: {},
@@ -41,7 +38,7 @@ export default class LandingPage extends Component {
 
             <div className={"controller" + (this.state.isLoginOpen ? "selected-controller" : "")}
               onClick={this.showLoginBox.bind(this)}> 
-                Login 
+                Login
             </div>
 
             <div className={"controller" + (this.state.isRegisterOpen ? "selected-controller" : "")}

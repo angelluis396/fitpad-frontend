@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 32px;
+}
+h2 {
+  border-bottom: 2px #ed213a;
+  color: #fff;
+}
+
 .border{
   width: 100px;
   height: 10px;
-  background-color:RGB(150,112,137);
   margin: 40px auto;
 }
 .root-container {
@@ -19,9 +26,12 @@
   flex-direction: column;
 }
 .box-controller {
+  background: rgba(0, 0, 0, .8);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
   visibility: visible;
   display: flex;
-  max-width: auto;
+  max-width: 600px;
   min-width: 250px;
   height: 35px;
   box-shadow:0 0 10px 4px rgba(15, 15, 15, 0.2);
@@ -34,21 +44,21 @@
   padding-right: 10px;
 }
 .controller {
-  flex: 1;
+  flex: 3;
   text-align: center;
   height: 100%;
   line-height: 2;
   cursor: pointer;
-  border-bottom: 2px solid blue;
+  width: auto;
 }
 
 /* Currently Selected Controller */
-.selected-controller {
-
-  /* position: relative;*/
-  width: 25px; 
-  /* transition: border 0.5s ease-out; */
-  border-bottom: 2px solid blue;
+div .controllerselected-controller {
+  overflow: hidden;
+  position: relative;
+  width: auto; 
+  transition: border 0.5s ease-out;
+  border-bottom: 2px solid #ed213a;
 }
 
 .box-container {
@@ -56,7 +66,7 @@
   overflow: hidden;
   box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
   border-radius: 6px;
-  background-color: RGB(175 ,135 ,143);
+  background: rgba(0, 0, 0, .8);
   padding-top: 10px;
 }
 .inner-container {
@@ -66,32 +76,37 @@
 .inner-container.show {
   visibility: visible;
 }
+.btn-container-lp {
+  text-align: center;
+}
 
-.landing-form-text{
-  background:	RGB(149 ,167 ,182);
+.landing-form-text {
+  background:	#fff;
   padding: 20px 40px;
   outline: none;
-  color:#ddd ;
+  color:#fff ;
   transition: 0.5s;
 }
 
-.landing-form-text:focus{
-  box-shadow:0 0 5px 4px RGB(59,93,128);
+.landing-form-text:focus {
+  box-shadow:0 0 5px 4px #ed213a;
 }
 
- .form-btns{
+ .form-btns {
   float: right;
   border: 0;
-  background-color: #ddd;
+  background-color: #ed213a;
   padding: 12px 50px;
-  border-radius: 20px;
+  border-radius: 8px;
   cursor: pointer;
   transition: 0.5s;
+  color: #fff;
+  text-align: center;
 }
 
 .form-btns:hover{
-  background-color:RGB(59,93,128);
-  color: #ddd;
+  background-color:black;
+  color: #fff;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px)  {

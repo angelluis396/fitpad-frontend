@@ -1,31 +1,32 @@
 {
   "exercises": {
-    "shoulders" : [
+    "Shoulders" : [
        "Barbell Upright Row" ,
        "Standing Military Press",
-       "Palms-In DB Press" ,
+       "Palms-In DB Press",
        "Shoulder Press",
-       "Lateral Raise" ,
-       "Bent-Over Rear Delt Raise" ,
-       "Lying Rear Delt Raise" ,
+       "Lateral Raise",
+       "Bent-Over Rear Delt Raise",
+       "Lying Rear Delt Raise",
        "DB Upright Row" 
     ],
-    "biceps" : [
-      "Barbell Biceps Curl" ,
-      "Close-Grip Barbell Biceps Curl" ,
-      "Forward Lying Barbell Biceps Curl" ,
-      "Reverse Barbell Biceps Curl" ,
-      "Hammer Curl" ,
-      "Seated Biceps Curl" ,
-      "Incline Biceps Curl" ,
-      "Seated Concentration Curl" ,
+    "Biceps" : [
+      "Barbell Biceps Curl",
+      "Close-Grip Barbell Biceps Curl",
+      "Forward Lying Barbell Biceps Curl",
+      "Reverse Barbell Biceps Curl",
+      "Reverse DB Curl",
+      "Hammer Curl",
+      "Seated Biceps Curl",
+      "Incline Biceps Curl",
+      "Seated Concentration Curl",
       "Standing Biceps Curl" 
     ],
-    "triceps": [
+    "Triceps": [
        "Barbell Triceps Extension",
        "Lying Barbell Triceps Extension",
        "Close Grip Bench Press",
-       "One arm Triceps Extension",
+       "One Arm Triceps Extension",
        "Triceps Kickback",
        "DB Lying Triceps Extension",
        "Cable Triceps Extension",
@@ -33,11 +34,11 @@
        "Pyramid Push ups",
        "Weighted Dips" 
     ],
-    "forearms": [
+    "Forearms": [
        "wrist curls",
        "plate holds"
     ],
-    "chest": [
+    "Chest": [
        "Flat Bench Press" ,
        "Incline Bench Press" ,
        "Decline Bench Press" ,
@@ -46,50 +47,52 @@
        "Cable Crossover" ,
        "Chest Press" 
     ],
-    "traps": [
+    "Traps": [
        "Barbell Shoulder Shrugs",
        "Seated Cable Row" ,
        "Cable Face Pulls" ,
        "DB Shoulder Shrugs"
     ],
-    "lats": [
+    "Lats": [
        "Wide Grip Pull Up" ,
        "Lat Pull Down" ,
        "Bent Over Row" ,
        "DB Row" ,
        "T-Bar Row" 
     ],
-    "abs": [
+    "Abs": [
        "Leg Raises" ,
        "Plank",
        "Roll Outs",
        "Flutter Kicks",
        "Sit Ups",
-       "Crunches" 
+       "Crunches",
+       "Hanging Leg Raises" 
     ],
-    "hamstrings": [
+    "Hamstrings": [
        "Hip Thrust",
        "Cable Pull Through",
        "Barbell Squat",
+       "Hamstring Curls",
        "Dead Lift",
        "DB Lunges",
        "Leg Press",
        "Machine Leg Curl" 
     ],
-    "quads": [
+    "Quads": [
        "Barbell Front Squat",
        "Leg Extensions",
        "Bulgarian Split Squat",
        "Goblet Squat",
        "Deficit Sumo Squat"
     ],
-    "glutes": [
+    "Glutes": [
        "Kickbacks",
        "Romanian Deadlifts",
        "Hip Thrust",
        "Hip Abduction Squats"
     ],
-    "calfs": [
+    "Calves": [
        "Barbell Calf raises",
        "Seated Calf raises",
        "Farmers Walks On Toes" 

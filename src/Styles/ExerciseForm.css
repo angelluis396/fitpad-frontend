@@ -13,7 +13,7 @@
 .border{
   width: 100px;
   height: 10px;
-  background-color:#3b8d99;
+  background-color:#ed213a;
   margin: 40px auto;
 }
 
@@ -22,6 +22,10 @@
   margin: auto;
   padding: 0 10px;
   overflow: hidden;
+  background: rgba(0, 0, 0, .6);
+  margin-top: 20px;
+  border-radius: 8px 0px 0px 8px;
+  box-shadow:  0 5px 25px rgba(0,0,0,.5);
 }
 
 
@@ -84,6 +88,9 @@
   outline: none;
   cursor: pointer;
 }
+.muscleSelect::selection {
+  box-shadow:  0 5px 25px rgba(0,0,0,1);
+}
 .container:after {
   content: 'keyboard_arrow_down';
   font-family: 'material icons';
@@ -111,19 +118,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .form-btn {
   float: right;
   border: 0;
-  background-color: #ddd;
+  background-color: black;
   padding: 12px 50px;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
   font-size: 16px;
+  color: #fff;
 }
 .form-btn:hover{
-  background-color:RGB(176,136,145) ;
+  background:#ed213a;
+  background: linear-gradient(to right, #ed213a, #93291e)
 }
 
 
@@ -135,18 +145,14 @@ and (max-device-width : 568px) {
   .border {
     margin: 10px auto;
   }
-  .form-text {
-    display: block;
-    align-items: center;
-    /* width: 100%; */
+  .addExercise-form{
     overflow: hidden;
-    box-sizing: border-box;
-    margin: 16px 0;
-    margin-right: auto;
-    background:	RGB(149 ,167 ,182);
-    /* padding: 20px 20px 0px 0px; */
-    color:#ddd ;
-    transition: 0.5s;
+    background: rgba(0, 0, 0, .6);
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 2px;
+    box-shadow:  0 5px 25px rgba(0,0,0,.5);
   }
   .setsBox .input-num {
     padding: .1rem .5rem .3rem .5rem;
@@ -171,16 +177,22 @@ and (max-device-width : 568px) {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
   }
   .form-btn {
     border: 0;
     font-size: 16px;
     width: 50%;
-    background-color: #ddd;
+    background-color: black;
     padding: 12px;
     border-radius: 15px;
     cursor: pointer;
     transition: 0.5s;
     margin: 5px;
+    margin-bottom: 0;
+  }
+  .form-btn::selection{
+    background:#ed213a;
+    background: linear-gradient(to right, #ed213a, #93291e)
   }
 }

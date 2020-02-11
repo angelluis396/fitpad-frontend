@@ -42,9 +42,9 @@ export default class Login extends Component {
   }
   render() {
     return (
-        <div className="inner-container">
+        <div className="inner-container"> 
           <div className="header">
-            Login
+            <h2 className="home-titles"> Login </h2>
           </div> 
           
           <div className="box">
@@ -56,19 +56,6 @@ export default class Login extends Component {
               <Button className="form-btns" type='submit'>  Login </Button>
             </form>
           </div>
-          
-
-    
-            
-              {/* <img className="inputImg" src={UserIcon} />  */}
-          
-            
-              {/* <img className="inputImg" src={PasswordIcon} /> */}
-           
-
-            
-              
-          
         </div>
     )
   }

@@ -19,3 +19,7 @@ html, body, #root, .App, .App_main {
 h1,h2,h3,h4,h5 {
   font-family: 'Bebas Neue', cursive;
 }
+
+p, ul, li, a {
+  font-family: 'Open Sans', sans-serif;
+}

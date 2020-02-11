@@ -36,7 +36,14 @@ static contextType= Context;
     return (
       <div className='navContents'>
         {TokenService.hasAuthToken()}
-        <div role="navigation" className="burgerIcon" id="burger" onClick={this.burgerMenuClick}> &#9776; </div>
+        <div 
+          role="navigation" 
+          className="burgerIcon" 
+          id="burger" 
+          onClick={this.burgerMenuClick}
+        > 
+          &#9776; 
+          </div>
         <ul className='links null' id='links' onClick={this.burgerMenuClick}>
           <li> <Link to='/home'> Home </Link></li>
           <li> <Link to='/add'> Add a Workout </Link></li>

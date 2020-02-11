@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 h1 {
   color: #fff;
 }
@@ -6,17 +7,24 @@ h1 {
   list-style-type: none;
   color: #fff;
 }
+
+.userWorkouts li .exerciseName {
+  margin: 10px 0;
+}
 .dateCreated {
   color: #fff;
   margin-bottom: 5px;
 }
 
+
 .userWorkouts {
-  border: solid grey;
   justify-content: center;
   text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background: rgba(0, 0, 0, .6);
+  box-shadow:  0 5px 25px rgba(0,0,0,.5);
+  margin-bottom: 15px;
 }
 
 .linkToAdd {
@@ -26,21 +34,49 @@ h1 {
 }
 
 .exercises-container {
-  border: solid violet;
   margin-left: 15%;
   margin-right: 15%;
 }
 
 .dateCreated {
-  border: yellow 2px;
+  margin-top: 5px;
 }
 
 .accordion-title {
   width: 100%;
   max-width: 600px;
   cursor: pointer;
+  padding: .8rem 3rem .8rem .5rem;
+  outline: none;
+  font-size: 15px;
+  border-radius: 0px 5px;
+  text-align: left;
+  border: 0px;
 }
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+  .userWorkouts {
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+  .accordion-title {
+    width: 100%;
+    max-width: 600px;
+    cursor: pointer;
+    padding: 20px;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 0px 5px;
+    text-align: center;
+    border: 0px;
+  }
+ 
+}  
 /* .accordion-content {
   visibility: hidden;
-  
+  content: 'keyboard_arrow_down';
+  font-family: 'material icons';
 } */

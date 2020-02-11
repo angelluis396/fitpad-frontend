@@ -41,7 +41,7 @@ export default class Register extends Component {
 
       <div className="inner-container">
         <div className="header">
-          Register
+        <h2 classname="home-titles"> Register </h2>
         </div>
 
         <div className="box">
