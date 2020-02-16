@@ -22,9 +22,12 @@
   background:	RGB(149 ,167 ,182);
   padding: 20px 40px;
   outline: none;
-  color:#fff ;
+  color:black ;
   transition: 0.5s;
   border-radius: 6px;
+}
+#password {
+  color: black;
 }
 
 .loginForm {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Textarea } from '../Utils/Utils';
 import Context from '../../Contexts/Context';
-import FitpadApiService from '../../Services/fitpad-api-service';
+import FitpadApiService from '../../services/fitpad-api-service';
 import MusclesDropDown from '../DropDowns/MusclesDropDown'
 import ExerciseDropDown from '../DropDowns/ExerciseDropDown'
 import Sets from './Sets'

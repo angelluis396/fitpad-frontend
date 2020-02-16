@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import TokenService from '../../Services/token-service';
-import AuthApiService from '../../Services/auth-api-service';
+import TokenService from '../../services/token-service';
+import AuthApiService from '../../services/auth-api-service';
 import { Button, Input } from '../Utils/Utils'
 import Context from '../../Contexts/Context'
-import UserIcon from '../../Photos/userIcon.svg';
-import PasswordIcon from '../../Photos/passwordIcon.svg'
 import '../../Styles/Login.css';
 
 export default class Login extends Component {

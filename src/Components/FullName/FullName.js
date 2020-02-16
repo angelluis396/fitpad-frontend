@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import TokenService from '../../Services/token-service'
-import FitpadApiService from '../../Services/fitpad-api-service'
+import TokenService from '../../services/token-service'
+import FitpadApiService from '../../services/fitpad-api-service'
 
 export default class FullName extends Component {
   constructor(props) {

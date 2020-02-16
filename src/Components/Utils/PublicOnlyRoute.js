@@ -1,5 +1,5 @@
 import React from 'react'
-import TokenService from '../../Services/token-service'
+import TokenService from '../../services/token-service'
 import { Route, Redirect } from 'react-router-dom'
 
 export default function PublicOnlyRoute({component, ...props}) {

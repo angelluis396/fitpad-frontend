@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "alias" : "angels-fitpad-app-fitpad-app",
+  "name": "fitpad",
+  "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "/index.html" }
+  ]
+}

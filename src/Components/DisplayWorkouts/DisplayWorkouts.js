@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FitpadApiService from '../../Services/fitpad-api-service'
+import FitpadApiService from '../../services/fitpad-api-service'
 import { Link } from 'react-router-dom';
 import '../../Styles/DisplayWorkouts.css';
 const moment = require('moment');

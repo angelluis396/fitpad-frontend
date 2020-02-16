@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Input, Required } from '../Utils/Utils'
 import '../../Styles/Register.css';
-import AuthApiService from '../../Services/auth-api-service'
+import AuthApiService from '../../services/auth-api-service'
 
 
 export default class Register extends Component {
@@ -56,7 +56,7 @@ export default class Register extends Component {
             
             <Input required type="email" id="user_email" className="landing-form-text" name="user_email" placeholder="Email" />  
             
-            <Input required type="text" id="password" className="landing-form-text" placeholder="Password" />
+            <Input required type="password" id="password" className="landing-form-text" placeholder="Password" />
 
             <Button className="form-btns" type="submit"> Register </Button>
           </form>
