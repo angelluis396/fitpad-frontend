@@ -15,13 +15,13 @@ const AuthApiService = {
       :res.json()
     );
   },
-  createUser(user){ 
+  createUser({full_name, user_name, user_email, password}){ 
     return fetch(`${config.API_ENDPOINT}/users`,{
       method: 'POST',
       headers: {
         'content-type' : 'application/json'
       },
-      body: JSON.stringify(user)
+      body: JSON.stringify({full_name, user_name, user_email, password})
     })
     .then(res => 
       (!res.ok)
