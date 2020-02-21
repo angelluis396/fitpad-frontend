@@ -1,33 +1,33 @@
 import React, { Component } from 'react'
-import { Button, Input, Required } from '../Utils/Utils'
-import '../../Styles/Register.css';
+import { Button, Input } from '../Utils/Utils'
 import AuthApiService from '../../services/auth-api-service'
-
+import '../../Styles/Register.css';
 
 export default class Register extends Component {
  
   static defaultProps = {
    onRegistrationSuccess: () => {}
- }
+ };
 
- state = { error: null }
+ state = { error: null };
 
  handleSubmit = event => {
   event.preventDefault();
-  const { full_name, user_name, user_email, password } = event.target
+  const { full_name, user_name, user_email, password } = event.target;
 
-  this.setState({error:null})
+  this.setState({error:null});
+  
   AuthApiService.createUser({
     full_name: full_name.value,
     user_name: user_name.value,
     user_email: user_email.value,
-    password: password.value,
+    password: password.value
   })
   .then(user => {
-    full_name.value=''
-    user_name.value=''
-    user_email.value=''
-    password.value=''
+    full_name.value='';
+    user_name.value='';
+    user_email.value='';
+    password.value='';
     this.props.onRegistrationSuccess()
   })
   .catch(res => {
