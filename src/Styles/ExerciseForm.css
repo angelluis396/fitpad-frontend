@@ -146,7 +146,7 @@ and (max-device-width : 568px) {
   .border {
     margin: 10px auto;
   }
-  .addExercise-form{
+  .addExercise-form {
     overflow: hidden;
     background: rgba(0, 0, 0, .6);
     margin-top: 20px;
@@ -167,6 +167,9 @@ and (max-device-width : 568px) {
     padding: 10px;
     border: 2 px solid grey;
     position: relative;
+  }
+  .muscleSelect {
+    background-color: #fff;
   }
   .textArea {
     position: relative;
