@@ -52,6 +52,7 @@ h1 {
   border-radius: 0px 5px;
   text-align: left;
   border: 0px;
+  background-color: #fff;
 }
 
 @media only screen 
@@ -72,11 +73,7 @@ and (max-device-width : 568px) {
     border-radius: 0px 5px;
     text-align: center;
     border: 0px;
+    background-color: #fff;
   }
  
 }  
-/* .accordion-content {
-  visibility: hidden;
-  content: 'keyboard_arrow_down';
-  font-family: 'material icons';
-} */

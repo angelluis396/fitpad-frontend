@@ -7,7 +7,7 @@
 
 .exercise-form h1{
   text-align: center;
-  color: white;
+  color: #fff;
 }
 
 .border{
@@ -87,6 +87,7 @@
       appearance: none;
   outline: none;
   cursor: pointer;
+  background-color: #fff;
 }
 .muscleSelect::selection {
   box-shadow:  0 5px 25px rgba(0,0,0,1);
