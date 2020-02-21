@@ -46,7 +46,7 @@ const FitpadApiService = {
     )
   },
   getFullName(){
-    return fetch(`${config.API_ENDPOINT}/home`, {
+    return fetch(`${config.API_ENDPOINT}/users`, {
       method: 'GET',
       headers: {
         'content-type':'application/json',
