@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import FitpadApiService from '../../services/fitpad-api-service'
 
@@ -12,6 +11,7 @@ export default class FullName extends Component {
        full_name: '',
     }
   }
+  
   componentDidMount() {
     if (TokenService.hasAuthToken()) {
       FitpadApiService.getFullName()
