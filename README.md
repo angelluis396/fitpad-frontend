@@ -3,7 +3,7 @@
 ---
 Link: https://fitpad.now.sh/
 ---
-Demo Credentials
+## Demo Credentials
 Email: guest@guest.com
 Password: Password1!
 ## Summary 
