@@ -1,4 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Fitpad App (Client)
+![Fitpad Logo](src/Photos/FitpadLogo.png)
+---
+Link: https://fitpad.now.sh/
+Demo Credentials
+Email: guest@guest.com
+Password: Password1!
+## Summary 
+This is a weightlifting tracker that allows you to create an account, login, and record your weightlifting exercises with minimal typing. When adding a new exercise you will select a muscle from the drop-down list, which Populates the drop-down list below it with exercises for that particular muscle. After selecting the exercise you can input the set number, repetitions, weight and notes. The loggged exercises can then be viewed on the users homepage.
+
+## Image Guide
+
+## Landing Page
+![Landing Page](src/Photos/landingPage.PNG)
+![Landing Page](src/Photos/register.PNG)
+## Register Page
+![Register Page](src/Photos/registerPage.PNG)
+## Login Page
+![Login Page](src/Photos/loginPage.PNG)
+## Home Page
+![User Home](src/Photos/userHome.PNG)
+## Add an Exercise Form
+![Add Exercise](src/Photos/addExercise.gif)
+
+## Technology Used
+React
 
 ## Available Scripts
 
