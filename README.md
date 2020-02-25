@@ -2,6 +2,7 @@
 ![Fitpad Logo](src/Photos/FitpadLogo.png)
 ---
 Link: https://fitpad.now.sh/
+---
 Demo Credentials
 Email: guest@guest.com
 Password: Password1!
@@ -11,8 +12,7 @@ This is a weightlifting tracker that allows you to create an account, login, and
 ## Image Guide
 
 ## Landing Page
-![Landing Page](src/Photos/landingPage.PNG)
-![Landing Page](src/Photos/register.PNG)
+![Landing Page](src/Photos/landingPage.gif)
 ## Register Page
 ![Register Page](src/Photos/registerPage.PNG)
 ## Login Page
