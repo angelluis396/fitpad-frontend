@@ -6,7 +6,6 @@ import MusclesDropDown from '../DropDowns/MusclesDropDown'
 import ExerciseDropDown from '../DropDowns/ExerciseDropDown'
 import Sets from './Sets'
 import '../../Styles/ExerciseForm.css';
-import muscles from '../DropDowns/muscles.json'
 const exercises = require('../DropDowns/exercises.json')
  
 export class ExerciseForm extends Component {
