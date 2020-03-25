@@ -16,6 +16,7 @@ export default class ExerciseDropDown extends Component {
             className="muscleSelect" 
             name="exercise_name" 
             onChange={this.handleChange}
+            required
           >
             <option 
               value="" disabled selected> 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ExerciseForm from './ExerciseForm';
+import ExerciseForm from '../Components/AddWorkout/ExerciseForm';
 
 export class AddWorkout extends Component {
   render() {

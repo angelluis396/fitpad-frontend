@@ -12,7 +12,9 @@ export class ExerciseForm extends Component {
   state={
     selectedMuscle: "",
     selectedExercise: "",
+    error: null
   }
+
   static defaultProps = {
     onAddWorkout: () =>{}
   };
@@ -26,7 +28,7 @@ export class ExerciseForm extends Component {
     this.setState({selectedExercise: event.target.value})
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
     const { workout } = this.context
     const {
@@ -35,8 +37,16 @@ export class ExerciseForm extends Component {
       workout_rep, 
       workout_weight,
       notes,
-    } = e.target
-    
+    } = e.target;
+
+    await this.setState({ error:null });
+
+    if(exercise_name.length === 0 || workout_set.length === 0 || workout_rep.length === 0 || workout_weight.length === 0) {
+      this.setState({
+        error: 'You must fill out exercise name, set, rep, and weight in order to submit this workout'
+      })
+    }
+
     FitpadApiService.postWorkout(
       exercise_name.value, 
       workout_set.value, 
@@ -44,17 +54,31 @@ export class ExerciseForm extends Component {
       workout_weight.value,
       notes.value
     )
-    .then(this.context.addWorkout)
-    .then(() => {
+    .then(workout => {
       exercise_name.value=''; 
       workout_set.value=''; 
       workout_rep.value='';
       workout_weight.value='' ;
       notes.value='';
+      this.props.onAddWorkout();
     })
-    this.props.onAddWorkout();
+    .catch(res => {
+      this.setState({
+        error: res.error
+      })
+    })
+    
   }
 
+  renderWorkoutError() {
+    if (this.state.error) {
+      return (
+        <div role="alert" className="form-alert">
+          <p> {this.state.error} </p>
+        </div>
+      )
+    }
+  }
 
   render() {
     const exerciseOptions = this.state.selectedMuscle === "" ? [] : exercises.exercises[this.state.selectedMuscle]
@@ -62,10 +86,14 @@ export class ExerciseForm extends Component {
     return (
       <div className="exercise-form">
         <h1> Add an Exercise </h1>
-        <form className="addExercise-form" onSubmit={this.handleSubmit}>
+        <form 
+          className="addExercise-form" 
+          onSubmit={this.handleSubmit}
+        >
+
+          {this.renderWorkoutError()}
 
         <div className="border"> </div>
-
             <div className="dropDown">
               <MusclesDropDown 
                 onSelect={this.handleSelectedMuscle}

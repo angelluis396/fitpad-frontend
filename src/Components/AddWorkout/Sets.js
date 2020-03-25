@@ -10,7 +10,8 @@ export default class Sets extends Component {
           className="input-num"
           placeholder="Set"
           name="workout_set"
-            min="1"
+          min="1"
+          required
         />
                   
         <Input
@@ -19,6 +20,7 @@ export default class Sets extends Component {
           placeholder="Reps"
           name="workout_rep"
           min="1"
+          required
         />
 
         <Input
@@ -27,6 +29,7 @@ export default class Sets extends Component {
           placeholder="Weight"
           name="workout_weight"
           min="1"
+          required
         />
       </div>  
     )

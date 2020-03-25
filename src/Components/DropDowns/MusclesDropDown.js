@@ -11,7 +11,11 @@ export default class BodyPartDropDown extends Component {
     const allMuscles = this.props.allMuscles
     return (
        <div className="container">
-          <select className="muscleSelect" onChange={this.handleChange}>
+          <select 
+            className="muscleSelect" 
+            onChange={this.handleChange}
+            required
+          >
             <option value="" disabled selected> Select A Muscle </option>
               {allMuscles.map(muscle => {
                 return (

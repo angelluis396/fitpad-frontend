@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import RegisterPage from "../../Routes/RegisterPage";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-import LoginPage from "../../Routes/LoginPage";
 import LandingPage from "../LandingPage/LandingPage";
-import AddWorkout from "../AddWorkout/AddWorkout";
 import PrivateRoute from "../Utils/PrivateRoute";
 import PublicOnlyRoute from "../Utils/PublicOnlyRoute";
 import NoPageFound from "../../Routes/NoPageFound";
@@ -12,7 +10,7 @@ import AddWorkoutPage from "../../Routes/AddWorkoutPage";
 import UserHomepage from "../User/UserHomepage";
 import Login from "../LoginRegister/Login";
 
-// import "../../Styles/App.css";
+
 import NavMenu from "../NavMenu/NavMenu";
 
 export class App extends Component {
@@ -66,23 +64,3 @@ export class App extends Component {
 }
 
 export default App;
-
-// Set up prior to 1/6
-// <Router>
-//           <Route exact path="/">
-//             <HomePage />
-//           </Route>
-
-//           <Route path="/Register">
-//             <Register />
-//           </Route>
-
-//           <Route path="/Login">
-//             <Login />
-//           </Route>
-
-//           <Route path="/AddWorkout">
-//             <AddWorkout />
-//           </Route>
-
-//         </Router>

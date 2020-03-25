@@ -6,22 +6,26 @@ import Context from '../../Contexts/Context'
 import '../../Styles/Login.css';
 
 export default class Login extends Component {
-  static contextType = Context
   static defaultProps = {
     location: {},
     history: {
       push: () => {},
     },
-  }
+  };
 
+  static contextType = Context;
 
   state= { error: null }
 
+
+  
+
   handleSubmitJwtAuth = event => {
-    event.preventDefault()
-    this.setState({ error:null })
+    event.preventDefault();
     const { user_email, password} = event.target
-    
+
+    this.setState({ error:null });
+
     AuthApiService.postLogin({
       user_email: user_email.value,
       password: password.value,
@@ -33,12 +37,13 @@ export default class Login extends Component {
       this.context.setAuth(res.authToken)
       this.props.onLoginSuccess()
     })
-    .catch(error => {
-      console.log(error);
-      this.setState({error: error})
+    .catch(res => {
+      this.setState({ error: res.error })
     })
   }
   render() {
+    const { error } = this.state;
+
     return (
         <div className="inner-container"> 
           <div className="header">
@@ -47,9 +52,29 @@ export default class Login extends Component {
           
           <div className="box">
             <form className= "loginForm" onSubmit={this.handleSubmitJwtAuth}>
-              <Input className="landing-form-text" required type="email" id="user_email" placeholder="Your Email" name="user_email"/>
+              <div role="alert" className="LogForm__alert">
+                {error && (
+                  <p aria-label="You have entered an incorrect username or password">
+                    {error}
+                  </p>
+                )}
+          </div>
+              <Input 
+                className="landing-form-text" 
+                required 
+                type="email" 
+                id="user_email" 
+                placeholder="Your Email" 
+                name="user_email"
+              />
 
-              <Input className="landing-form-text" required type="password" id="password" name="password" placeholder="Password"/>
+              <Input 
+                className="landing-form-text" 
+                required type="password" 
+                id="password" 
+                name="password" 
+                placeholder="Password"
+              />
 
               <Button className="form-btns" type='submit'>  Login </Button>
             </form>

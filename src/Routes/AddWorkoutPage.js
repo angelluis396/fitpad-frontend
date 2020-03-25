@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Section } from '../Components/Utils/Utils';
-import AddWorkout from '../Components/AddWorkout/AddWorkout';
+import AddWorkout from '../Routes/AddWorkout';
 
 export default class AddWorkoutPage extends Component {
   static defaultProps = {

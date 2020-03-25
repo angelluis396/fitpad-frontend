@@ -35,8 +35,8 @@ export default class LandingPage extends Component {
       <div className="root-container">
         <h1> Welcome To FitPad </h1>
         <div className="fitpad-desc">
-          <p> 
-            Fitpad is a weightlifting tracker that allows you to effortlessly track your exercises. When adding a new exercise you will select a muscle from the drop-down list, which Populates the drop-down list below it with exercises for that particular muscle. After selecting the exercise you can input the set number, repetitions, weight and notes. The logged exercises can then be viewed on the user's homepage. 
+          <p className="fitpad-p" > 
+            Fitpad is a weightlifting tracker that allows you to effortlessly track your exercises. When adding a new exercise you will select a muscle from the drop-down list, which populates the drop-down list below it with exercises for that particular muscle. After selecting the exercise you can input the set number, repetitions, weight and notes. The logged exercises can then be viewed on the user's homepage.<b> Demo Credentials: Email: guest@guest.com Password: Password1! </b>
           </p>
         </div>
        
