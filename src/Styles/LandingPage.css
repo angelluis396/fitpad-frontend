@@ -43,6 +43,7 @@ h2 {
   transition: visibility 0.5s ease-out;
   padding-left: 10px;
   padding-right: 10px;
+  
 }
 .controller {
   flex: 3;
@@ -69,6 +70,7 @@ div .controllerselected-controller {
   border-radius: 6px;
   background: rgba(0, 0, 0, .8);
   padding-top: 10px;
+  height: 100%;
 }
 .inner-container {
   transition: visibility 0.2s ease-out;
@@ -137,7 +139,7 @@ div.fitpad-desc {
     height: 100%;
   }
   div.root-container {
-    overflow: scroll;
+    height: fit-content;
   }
   
 }
